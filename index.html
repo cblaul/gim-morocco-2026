@@ -2,2050 +2,1922 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morocco GIM Trip — Connor Blaul</title>
-
-<!-- Open Graph / Link Preview -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Morocco & Paris — GIM 2026">
-<meta property="og:description" content="Trip Command Center for Kellogg GIM Morocco 2026. Flights, itinerary, culture prep, packing list, and more.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Morocco 2026 — Kellogg GIM Photo Gallery</title>
+<meta name="description" content="Photos and videos from the Kellogg School of Management GIM trip to Morocco, March 2026. Casablanca, Rabat, Marrakesh, and beyond.">
+<meta property="og:title" content="Morocco 2026 — Kellogg GIM">
+<meta property="og:description" content="Photos from the Kellogg GIM trip to Morocco. Casablanca, Rabat, and beyond.">
 <meta property="og:image" content="https://cblaul.github.io/gim-morocco-2026/og-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://cblaul.github.io/gim-morocco-2026/">
-
-<!-- Twitter / iMessage -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Morocco & Paris — GIM 2026">
-<meta name="twitter:description" content="Trip Command Center for Kellogg GIM Morocco 2026. March 17–28.">
+<meta name="twitter:title" content="Morocco 2026 — Kellogg GIM">
+<meta name="twitter:description" content="Photos from the Kellogg GIM trip to Morocco.">
 <meta name="twitter:image" content="https://cblaul.github.io/gim-morocco-2026/og-preview.png">
-
-<!-- Apple / iMessage specific -->
-<meta name="apple-mobile-web-app-title" content="GIM Morocco 2026">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    /* YSL Marrakech Museum-inspired palette */
+    --sand: #F7F4F0;
+    --sand-light: #FDFCFA;
+    --sand-dark: #E9E3DB;
+    --terracotta: #B8453A;
+    --terracotta-light: #C96B5E;
+    --terracotta-dark: #8E3028;
+    --earth: #6B5B4E;
+    --earth-light: #9A8B7A;
+    --deep-brown: #1A1714;
+    --warm-black: #0F0D0B;
+    --warm-gray: #6E6660;
+    --light-gray: #B8B0A8;
+    --white: #FFFFFF;
+    --majorelle: #6050DC;
+    --majorelle-light: #7B6EE3;
+    --majorelle-muted: rgba(96, 80, 220, 0.12);
+  }
+
+  html { scroll-behavior: smooth; }
+
   body {
     font-family: 'Inter', -apple-system, sans-serif;
-    background: #F8F9FA;
-    color: #4B5563;
-    line-height: 1.8;
+    background: var(--sand-light);
+    color: var(--deep-brown);
+    line-height: 1.6;
     font-weight: 300;
-    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
   }
-  :root {
-    --deep-blue: #051C2C;
-    --signal-blue: #0F5298;
-    --teal: #0A7C6A;
-    --white: #051C2C;
-    --off-white: #F8F9FA;
-    --light-gray: #E5E7EB;
-    --mid-gray: #9CA3AF;
-    --dark-gray: #4B5563;
-    --success: #2E7D5B;
-    --alert: #D94F4F;
-    --card-bg: #FFFFFF;
-    --border: #E5E7EB;
-    --text-muted: #9CA3AF;
-    --text-body: #4B5563;
-  }
-  h1, h2, h3, .stat-value, .display-text {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-weight: 400;
-  }
-  .label {
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--signal-blue);
-  }
-  a { color: var(--signal-blue); text-decoration: none; transition: color 0.2s; }
-  a:hover { color: var(--teal); }
 
-  /* Top bar */
-  .topbar {
-    background: #FFFFFF;
-    border-bottom: 1px solid #E5E7EB;
+  /* ===== NAVIGATION ===== */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(253, 252, 250, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--sand-dark);
+    transition: all 0.3s ease;
+  }
+
+  nav.scrolled {
+    background: rgba(253, 252, 250, 0.98);
+    box-shadow: 0 1px 20px rgba(15, 13, 11, 0.06);
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 16px 32px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    align-items: center;
   }
-  .logo {
-    width: 40px; height: 40px;
-    background: linear-gradient(135deg, #0D2137, #051C2C);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 2px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--signal-blue);
+
+  .nav-brand {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 20px;
+    color: var(--deep-brown);
+    text-decoration: none;
+    letter-spacing: -0.5px;
   }
-  .topbar-title {
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
+
+  .nav-brand span { color: var(--terracotta); }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
     font-weight: 500;
-    color: #4B5563;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--terracotta); }
+
+  /* Mobile hamburger */
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 1.5px;
+    background: var(--deep-brown);
+    margin: 5px 0;
+    transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(253, 252, 250, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 100px 32px 32px;
+  }
+
+  .mobile-menu.active { display: flex; flex-direction: column; gap: 24px; }
+
+  .mobile-menu a {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 32px;
+    color: var(--deep-brown);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--sand-dark);
+  }
+
+  .mobile-menu a:active { color: var(--terracotta); }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 32px 80px;
+    background: linear-gradient(180deg, var(--sand) 0%, var(--sand-light) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(184, 69, 58, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(56px, 11vw, 110px);
+    line-height: 0.95;
+    letter-spacing: -2px;
+    color: var(--deep-brown);
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-style: italic;
+    color: var(--earth-light);
+    margin-bottom: 40px;
+    max-width: 500px;
+  }
+
+  .hero-meta {
+    font-size: 13px;
+    color: var(--warm-gray);
     letter-spacing: 0.5px;
   }
 
-  /* Nav tabs */
-  .nav-tabs {
-    display: flex;
-    gap: 0;
-    border-bottom: 1px solid #E5E7EB;
-    padding: 0 32px;
-    background: #FFFFFF;
-    overflow-x: auto;
+  .hero-meta span {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--light-gray);
   }
-  .nav-tab {
-    padding: 14px 20px;
-    font-size: 12px;
+
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--sand-dark);
+  }
+
+  .hero-stat {
+    text-align: center;
+  }
+
+  .hero-stat-value {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 32px;
+    color: var(--deep-brown);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .hero-stat-label {
+    font-size: 10px;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #9CA3AF;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s;
-    white-space: nowrap;
-  }
-  .nav-tab:hover { color: #4B5563; }
-  .nav-tab.active { color: var(--teal); border-bottom-color: var(--teal); }
-
-  /* Section */
-  .section { display: none; padding: 32px; max-width: 1200px; margin: 0 auto; }
-  .section.active { display: block; }
-  .section-title {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-size: 32px;
-    color: #051C2C;
-    letter-spacing: -0.5px;
-    margin-bottom: 8px;
-  }
-  .section-subtitle {
-    font-size: 14px;
-    color: var(--text-body);
-    margin-bottom: 28px;
-    font-weight: 300;
-    line-height: 1.8;
+    color: var(--warm-gray);
   }
 
-  /* Hero */
-  .hero {
-    padding: 48px 32px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero h1 {
-    font-size: 48px;
-    color: #051C2C;
-    letter-spacing: -1px;
-    line-height: 1.12;
-    margin-bottom: 8px;
-  }
-  .hero .tagline {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-style: italic;
-    font-size: 20px;
-    color: #4B5563;
-    margin-bottom: 24px;
-  }
-  .hero-gradient {
-    height: 3px;
-    background: linear-gradient(90deg, var(--signal-blue), var(--teal));
-    border-radius: 2px;
-    margin-bottom: 32px;
-    width: 120px;
-  }
-
-  /* Stats row */
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-bottom: 32px;
-  }
-  .stat-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    padding: 24px;
-  }
-  .stat-card .label { margin-bottom: 8px; display: block; }
-  .stat-card .stat-value {
-    font-size: 28px;
-    color: #051C2C;
-    line-height: 1.2;
-  }
-  .stat-card .stat-detail {
-    font-size: 12px;
-    color: #9CA3AF;
-    margin-top: 4px;
-  }
-
-  /* Cards */
-  .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    padding: 24px;
-    margin-bottom: 20px;
-  }
-  .card-title {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-size: 22px;
-    color: #051C2C;
-    margin-bottom: 16px;
-  }
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  .card-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  /* Timeline */
-  .timeline-item {
-    display: flex;
-    gap: 20px;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .timeline-item:last-child { border-bottom: none; }
-  .timeline-date {
-    min-width: 140px;
-    text-align: right;
-  }
-  .timeline-date .day {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-size: 20px;
-    color: #051C2C;
-  }
-  .timeline-date .date {
-    font-size: 12px;
-    color: #9CA3AF;
-    font-weight: 500;
-  }
-  .timeline-marker {
+  .scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
-  }
-  .timeline-dot {
-    width: 12px; height: 12px;
-    border-radius: 50%;
-    background: var(--signal-blue);
-    border: 2px solid #F8F9FA;
-    flex-shrink: 0;
-    margin-top: 6px;
-  }
-  .timeline-dot.teal { background: var(--teal); }
-  .timeline-dot.alert { background: var(--alert); }
-  .timeline-line {
-    width: 2px;
-    flex: 1;
-    background: var(--border);
-  }
-  .timeline-content {
-    flex: 1;
-    padding-bottom: 4px;
-  }
-  .timeline-content h3 {
-    font-size: 18px;
-    color: #051C2C;
-    margin-bottom: 6px;
-  }
-  .timeline-content p {
-    font-size: 14px;
-    color: var(--text-body);
-    line-height: 1.8;
-    font-weight: 300;
-  }
-
-  /* Checklist */
-  .checklist-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .checklist-item:last-child { border-bottom: none; }
-  .checkbox {
-    width: 20px; height: 20px;
-    border: 1.5px solid var(--signal-blue);
-    border-radius: 2px;
-    flex-shrink: 0;
-    margin-top: 2px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-  }
-  .checkbox.checked {
-    background: var(--teal);
-    border-color: var(--teal);
-  }
-  .checkbox.checked::after {
-    content: '✓';
-    color: white;
-    font-size: 12px;
-    font-weight: 700;
-  }
-  .checklist-text {
-    font-size: 14px;
-    color: var(--text-body);
-    line-height: 1.8;
-    font-weight: 300;
-  }
-  .checklist-text.checked-text {
-    text-decoration: line-through;
-    opacity: 0.5;
-  }
-  .checklist-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 2px 8px;
-    border-radius: 2px;
-    display: inline-block;
-    margin-left: 8px;
-  }
-  .label-urgent {
-    background: rgba(217,79,79,0.15);
-    color: var(--alert);
-  }
-  .label-action {
-    background: rgba(15,82,152,0.15);
-    color: var(--signal-blue);
-  }
-  .label-pack {
-    background: rgba(10,124,106,0.15);
-    color: var(--teal);
-  }
-
-  /* Hotel card */
-  .hotel-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    padding: 24px;
-  }
-  .hotel-name {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-size: 22px;
-    color: #051C2C;
-    margin-bottom: 4px;
-  }
-  .hotel-city {
-    font-size: 12px;
-    font-weight: 600;
+    gap: 8px;
+    color: var(--light-gray);
+    font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--signal-blue);
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .scroll-indicator .line {
+    width: 1px;
+    height: 32px;
+    background: linear-gradient(to bottom, var(--light-gray), transparent);
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* ===== SECTIONS ===== */
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta-light);
     margin-bottom: 12px;
   }
-  .hotel-detail {
-    font-size: 13px;
-    color: #4B5563;
-    font-weight: 300;
+
+  .section-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(32px, 4vw, 48px);
+    letter-spacing: -1px;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .section-desc {
+    font-size: 15px;
+    color: var(--earth-light);
+    max-width: 600px;
+    margin-bottom: 48px;
     line-height: 1.8;
   }
 
-  /* Document links */
-  .doc-link {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 16px 20px;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    margin-bottom: 12px;
-    transition: all 0.2s;
+  /* ===== HIGHLIGHT REEL ===== */
+  .highlight-section {
+    padding: 80px 32px;
+    background: var(--warm-black);
+    color: var(--sand);
+  }
+
+  .highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 12px;
+  }
+
+  .highlight-grid .photo-card:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  /* ===== PHOTO CARDS ===== */
+  .photo-card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
     cursor: pointer;
-    text-decoration: none;
+    aspect-ratio: 3/2;
+    background: var(--deep-brown);
   }
-  .doc-link:hover {
-    border-color: var(--signal-blue);
-    background: rgba(15,82,152,0.05);
+
+  .photo-card.featured { aspect-ratio: auto; min-height: 300px; }
+
+  .photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
-  .doc-icon {
-    width: 40px; height: 40px;
+
+  .photo-card:hover img { transform: scale(1.04); }
+
+  .photo-card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(15, 13, 11, 0.85));
+    opacity: 0;
+    transition: opacity 0.3s ease;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    background: rgba(15,82,152,0.12);
-    border-radius: 2px;
-    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: flex-end;
   }
-  .doc-info { flex: 1; }
-  .doc-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: #051C2C;
-    margin-bottom: 2px;
+
+  .photo-card:hover .overlay { opacity: 1; }
+
+  /* On touch devices, always show overlay */
+  @media (hover: none) {
+    .photo-card .overlay { opacity: 1; }
   }
-  .doc-meta {
-    font-size: 11px;
-    color: #9CA3AF;
+
+  .overlay .caption {
+    font-size: 13px;
+    color: var(--sand);
     font-weight: 400;
   }
 
-  /* Insight block */
-  .insight {
-    border-left: 3px solid var(--signal-blue);
-    background: rgba(15,82,152,0.04);
-    padding: 16px 20px;
-    margin-bottom: 16px;
-    border-radius: 0 2px 2px 0;
-  }
-  .insight.teal-border { border-left-color: var(--teal); background: rgba(10,124,106,0.04); }
-  .insight.alert-border { border-left-color: var(--alert); background: rgba(217,79,79,0.04); }
-  .insight p {
-    font-size: 14px;
-    color: #4B5563;
-    line-height: 1.8;
-    font-weight: 300;
-  }
-  .insight strong { color: #051C2C; font-weight: 500; }
-
-  /* Packing grid */
-  .packing-category {
-    margin-bottom: 24px;
-  }
-  .packing-category-title {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--signal-blue);
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* Status pill */
-  .status-pill {
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 2px;
+  .overlay .location {
     font-size: 10px;
+    color: var(--terracotta-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* Download button on cards */
+  .photo-download-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .photo-download-btn:hover,
+  .photo-download-btn:active { background: rgba(255,255,255,0.3); }
+
+  .photo-download-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--white);
+    fill: none;
+    stroke-width: 2;
+  }
+
+  /* Loading state */
+  .photo-card.loading {
+    background: linear-gradient(135deg, rgba(184,69,58,0.06), rgba(96,80,220,0.04));
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+
+  .photo-card.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(184,69,58,0.04);
+  }
+
+  .photo-card.error::after {
+    content: 'Photo unavailable';
+    font-size: 11px;
+    color: var(--light-gray);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ===== VIDEO CARDS ===== */
+  .video-card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 3/2;
+    background: var(--deep-brown);
+  }
+
+  .video-card iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+  }
+
+  .video-card.playing iframe {
+    pointer-events: auto;
+  }
+
+  .video-card .play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 13, 11, 0.3);
+    transition: background 0.3s;
+    z-index: 2;
+  }
+
+  .video-card:hover .play-overlay {
+    background: rgba(15, 13, 11, 0.15);
+  }
+
+  .video-card .play-btn-circle {
+    width: 64px;
+    height: 64px;
+    background: rgba(184, 69, 58, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background 0.2s;
+    backdrop-filter: blur(4px);
+  }
+
+  .video-card:hover .play-btn-circle {
+    transform: scale(1.1);
+    background: var(--terracotta);
+  }
+
+  .video-card .play-btn-circle svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--white);
+    margin-left: 3px;
+  }
+
+  .video-card .video-label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 9px;
     font-weight: 600;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-  }
-  .status-pending {
-    background: rgba(217,79,79,0.15);
-    color: var(--alert);
-  }
-  .status-done {
-    background: rgba(46,125,91,0.15);
-    color: var(--success);
+    color: var(--white);
+    background: rgba(184, 69, 58, 0.85);
+    padding: 4px 8px;
+    border-radius: 2px;
+    z-index: 3;
   }
 
-  /* Tips section */
-  .tip-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 2px;
+  .video-card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 20px;
+    background: linear-gradient(transparent, rgba(15, 13, 11, 0.85));
+    z-index: 3;
+  }
+
+  /* Highlight carousel */
+  .highlight-carousel {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    max-height: 500px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  .highlight-carousel .carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .highlight-carousel .carousel-slide.active {
+    opacity: 1;
+  }
+
+  .highlight-carousel .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .highlight-carousel .carousel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px;
+    background: linear-gradient(transparent, rgba(15, 13, 11, 0.92));
+  }
+
+  .highlight-carousel .carousel-caption {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(20px, 3vw, 28px);
+    color: var(--sand);
+    margin-bottom: 4px;
+  }
+
+  .highlight-carousel .carousel-location {
+    font-size: 11px;
+    color: var(--terracotta-light);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+  }
+
+  .carousel-dot.active {
+    background: var(--terracotta-light);
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  /* Video reel row */
+  .video-reel {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  @media (max-width: 768px) {
+    .video-reel { grid-template-columns: 1fr; }
+    .highlight-carousel { aspect-ratio: 4/3; max-height: 350px; }
+  }
+
+  /* ===== SECTION DIVIDERS (Apple-style) ===== */
+  .section-divider {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--warm-black);
+    overflow: hidden;
+  }
+
+  .section-divider .divider-number {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(80px, 12vw, 160px);
+    color: rgba(96, 80, 220, 0.06);
+    line-height: 1;
+    letter-spacing: -4px;
+    position: absolute;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 1s ease;
+  }
+
+  .section-divider.revealed .divider-number {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .section-divider .divider-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--majorelle-light);
+    margin-bottom: 16px;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s, opacity 0.8s ease 0.15s;
+  }
+
+  .section-divider.revealed .divider-label {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .section-divider .divider-city {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(48px, 8vw, 96px);
+    color: var(--sand);
+    letter-spacing: -2px;
+    line-height: 1.1;
+    text-align: center;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s, opacity 1s ease 0.25s;
+  }
+
+  .section-divider.revealed .divider-city {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .section-divider .divider-date {
+    font-size: 13px;
+    color: var(--earth-light);
+    letter-spacing: 0.5px;
+    margin-top: 12px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s, opacity 0.8s ease 0.4s;
+  }
+
+  .section-divider.revealed .divider-date {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .section-divider .divider-line {
+    width: 48px;
+    height: 1px;
+    background: var(--majorelle);
+    margin-top: 24px;
+    transform: scaleX(0);
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.55s;
+  }
+
+  .section-divider.revealed .divider-line {
+    transform: scaleX(1);
+  }
+
+  /* ===== SCROLL ANIMATIONS ===== */
+  .scroll-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .scroll-fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Staggered grid items */
+  .photo-grid > .scroll-fade-up:nth-child(1) { transition-delay: 0s; }
+  .photo-grid > .scroll-fade-up:nth-child(2) { transition-delay: 0.08s; }
+  .photo-grid > .scroll-fade-up:nth-child(3) { transition-delay: 0.16s; }
+  .photo-grid > .scroll-fade-up:nth-child(4) { transition-delay: 0.24s; }
+  .photo-grid > .scroll-fade-up:nth-child(5) { transition-delay: 0.32s; }
+  .photo-grid > .scroll-fade-up:nth-child(6) { transition-delay: 0.4s; }
+  .photo-grid > .scroll-fade-up:nth-child(7) { transition-delay: 0.08s; }
+  .photo-grid > .scroll-fade-up:nth-child(8) { transition-delay: 0.16s; }
+  .photo-grid > .scroll-fade-up:nth-child(9) { transition-delay: 0.24s; }
+  .photo-grid > .scroll-fade-up:nth-child(10) { transition-delay: 0.32s; }
+  .photo-grid > .scroll-fade-up:nth-child(11) { transition-delay: 0.4s; }
+  .photo-grid > .scroll-fade-up:nth-child(12) { transition-delay: 0.08s; }
+
+  /* ===== DAY SECTIONS ===== */
+  .day-section {
+    padding: 80px 32px;
+  }
+
+  .day-section.bg-sand { background: var(--sand); }
+  .day-section.bg-light { background: var(--sand-light); }
+
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  .day-number {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(48px, 6vw, 72px);
+    color: var(--sand-dark);
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .bg-sand .day-number { color: var(--sand-light); }
+
+  .day-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(28px, 3.5vw, 40px);
+    color: var(--deep-brown);
+    letter-spacing: -0.5px;
+  }
+
+  .day-date {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--terracotta);
     margin-bottom: 12px;
   }
-  .tip-card p {
-    font-size: 14px;
-    color: var(--text-body);
+
+  .day-desc {
+    font-size: 15px;
+    color: var(--warm-gray);
+    max-width: 700px;
     line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .photo-grid .wide {
+    grid-column: span 2;
+    aspect-ratio: 2.2/1;
+  }
+
+  /* Empty state for days without photos yet */
+  .empty-day {
+    padding: 48px 24px;
+    text-align: center;
+    border: 1px dashed var(--light-gray);
+    border-radius: 2px;
+  }
+
+  .empty-day svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--light-gray);
+    fill: none;
+    stroke-width: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .empty-day p {
+    font-size: 13px;
+    color: var(--light-gray);
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    padding: 60px 32px;
+    background: var(--warm-black);
+    text-align: center;
+  }
+
+  footer .footer-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 28px;
+    color: var(--sand);
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+
+  footer .footer-sub {
+    font-size: 13px;
+    color: var(--earth-light);
+    margin-bottom: 8px;
+  }
+
+  footer .drive-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--majorelle-light);
+    text-decoration: none;
+    padding: 10px 24px;
+    border: 1px solid rgba(96, 80, 220, 0.3);
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+
+  footer .drive-link:hover {
+    background: rgba(96, 80, 220, 0.08);
+    border-color: var(--majorelle-light);
+  }
+
+  footer .footer-credits {
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  footer .footer-credits span { color: var(--majorelle-light); }
+
+  /* ===== LIGHTBOX ===== */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(15, 13, 11, 0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    touch-action: none;
+  }
+
+  .lightbox.active { display: flex; }
+
+  .lightbox-img-container {
+    position: relative;
+    max-width: 92vw;
+    max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox img {
+    max-width: 92vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 2px;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .lightbox-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .lightbox-counter {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(245, 240, 235, 0.6);
+    letter-spacing: 1px;
+  }
+
+  .lightbox-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .lightbox-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .lightbox-btn:hover,
+  .lightbox-btn:active { background: rgba(255,255,255,0.2); }
+
+  .lightbox-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--sand);
+    fill: none;
+    stroke-width: 2;
+  }
+
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .lightbox-nav.prev { left: 12px; }
+  .lightbox-nav.next { right: 12px; }
+
+  .lightbox-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .lightbox-caption p {
+    font-size: 14px;
+    color: var(--sand);
     font-weight: 300;
   }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .stats-row { grid-template-columns: repeat(2, 1fr) !important; }
-    .card-grid, .card-grid-3 { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 36px; }
-    .timeline-date { min-width: 100px; }
-    .nav-tabs { padding: 0 16px; }
-    .section { padding: 24px 16px; }
-    .hero { padding: 32px 16px; }
+  .lightbox-caption small {
+    font-size: 11px;
+    color: var(--terracotta-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
+
+  /* Swipe hint for mobile */
+  .swipe-hint {
+    display: none;
+    font-size: 11px;
+    color: rgba(245, 240, 235, 0.4);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 16px;
+  }
+
+  /* ===== MUSIC PLAYER ===== */
+  .music-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 99;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(15, 13, 11, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(96, 80, 220, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
+  .music-btn:hover {
+    transform: scale(1.08);
+    border-color: var(--majorelle);
+    box-shadow: 0 4px 24px rgba(96, 80, 220, 0.25);
+  }
+
+  .music-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--terracotta-light);
+    transition: fill 0.2s;
+  }
+
+  .music-btn.playing svg {
+    fill: var(--terracotta);
+  }
+
+  .music-btn .eq-bars {
+    display: none;
+    gap: 2px;
+    align-items: flex-end;
+    height: 16px;
+  }
+
+  .music-btn.playing .eq-bars { display: flex; }
+  .music-btn.playing .play-icon { display: none; }
+
+  .eq-bar {
+    width: 3px;
+    background: var(--terracotta);
+    border-radius: 1px;
+    animation: eq 0.8s ease-in-out infinite alternate;
+  }
+
+  .eq-bar:nth-child(1) { height: 6px; animation-delay: 0s; }
+  .eq-bar:nth-child(2) { height: 12px; animation-delay: 0.15s; }
+  .eq-bar:nth-child(3) { height: 8px; animation-delay: 0.3s; }
+  .eq-bar:nth-child(4) { height: 14px; animation-delay: 0.1s; }
+
+  @keyframes eq {
+    0% { height: 4px; }
+    100% { height: 16px; }
+  }
+
+  .music-tooltip {
+    position: absolute;
+    right: 62px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 13, 11, 0.92);
+    color: var(--sand);
+    font-size: 11px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    border: 1px solid rgba(96, 80, 220, 0.2);
+  }
+
+  .music-btn:hover .music-tooltip { opacity: 1; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    .nav-inner { padding: 14px 20px; }
+    .hero { padding: 100px 20px 60px; }
+    .hero-stats { gap: 24px; }
+    .hero-stat-value { font-size: 26px; }
+    .highlight-section { padding: 60px 20px; }
+    .highlight-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .highlight-grid .photo-card:first-child {
+      grid-column: 1 / -1;
+      grid-row: 1;
+    }
+    .day-section { padding: 60px 20px; }
+    .day-header { flex-direction: column; gap: 4px; }
+    .photo-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .photo-grid .wide {
+      grid-column: span 2;
+    }
+    .section-inner { padding: 0; }
+    .section-divider { height: 50vh; min-height: 320px; }
+    .lightbox-nav.prev { left: 4px; }
+    .lightbox-nav.next { right: 4px; }
+    .lightbox-btn { width: 36px; height: 36px; }
+    .lightbox-btn svg { width: 16px; height: 16px; }
+    .swipe-hint { display: block; }
+  }
+
   @media (max-width: 480px) {
-    .stats-row { grid-template-columns: 1fr; }
-    .timeline-item { flex-direction: column; gap: 8px; }
-    .timeline-date { text-align: left; }
-    .timeline-marker { display: none; }
+    .photo-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+    .photo-grid .wide { grid-column: span 2; aspect-ratio: 2/1; }
+    .hero-stats { flex-direction: row; gap: 20px; }
+    .hero-stat-value { font-size: 24px; }
+    .highlight-grid { grid-template-columns: 1fr; }
+    .highlight-grid .photo-card:first-child { grid-column: 1; }
+    .section-divider { height: 45vh; min-height: 280px; }
+  }
+
+  /* Safe area for iOS notch */
+  @supports (padding: max(0px)) {
+    nav { padding-top: max(0px, env(safe-area-inset-top)); }
+    footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    .lightbox-controls { padding-top: max(16px, env(safe-area-inset-top)); }
   }
 </style>
 </head>
 <body>
 
-<!-- Top Bar -->
-<div class="topbar">
-  <div style="display:flex; align-items:center; gap:16px;">
-    <div class="logo">CB</div>
-    <span class="topbar-title">GIM Morocco 2026 — Trip Command Center</span>
-  </div>
-  <span style="font-size:12px; color:#9CA3AF;">March 17–28, 2026</span>
-</div>
-
 <!-- Navigation -->
-<div class="nav-tabs">
-  <div class="nav-tab active" onclick="showSection('overview')">Overview</div>
-  <div class="nav-tab" onclick="showSection('flights')">Flights</div>
-  <div class="nav-tab" onclick="showSection('calendar')">Calendar</div>
-  <div class="nav-tab" onclick="showSection('itinerary')">Itinerary</div>
-  <div class="nav-tab" onclick="showSection('checklist')">Pre-Trip Checklist</div>
-  <div class="nav-tab" onclick="showSection('packing')">Packing List</div>
-  <div class="nav-tab" onclick="showSection('places')">Places to Visit</div>
-  <div class="nav-tab" onclick="showSection('docs')">Documents & Links</div>
-  <div class="nav-tab" onclick="showSection('culture')">Culture Prep</div>
-  <div class="nav-tab" onclick="showSection('contacts')">Contacts</div>
-</div>
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">Morocco <span>'26</span></a>
+    <ul class="nav-links" id="navLinks"></ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-<!-- ============ OVERVIEW ============ -->
-<div class="hero section active" id="overview">
-  <h1>Morocco &amp; Paris</h1>
-  <div class="tagline">GIM Nation Branding, Risk, and Global Investing — plus 4 days in Paris</div>
-  <div class="hero-gradient"></div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu"></div>
 
-  <div class="stats-row">
-    <div class="stat-card">
-      <span class="label">Full Trip</span>
-      <div class="stat-value" style="font-size:24px;">12 Days</div>
-      <div class="stat-detail">Mar 17–28 • GIM starts Mar 19</div>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-label">Kellogg Global Initiatives in Management</div>
+  <h1>Morocco</h1>
+  <div class="hero-subtitle">Through the lens of the Red City, the White City, and everything between</div>
+  <div class="hero-meta">
+    March 17–25, 2026 <span>·</span> Casablanca · Rabat · Marrakesh · Agafay <span>·</span> Photos by Connor Blaul
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-value" id="statPhotos">0</div>
+      <div class="hero-stat-label">Photos</div>
     </div>
-    <div class="stat-card">
-      <span class="label">Casablanca</span>
-      <div class="stat-value" style="font-size:24px;">4 Nights</div>
-      <div class="stat-detail">Mar 18–22 • Radisson Gauthier</div>
+    <div class="hero-stat">
+      <div class="hero-stat-value" id="statDays">2</div>
+      <div class="hero-stat-label">Days</div>
     </div>
-    <div class="stat-card">
-      <span class="label">Marrakech</span>
-      <div class="stat-value" style="font-size:24px;">2 Nights</div>
-      <div class="stat-detail">Mar 22–24 • Palm Plaza</div>
-    </div>
-    <div class="stat-card">
-      <span class="label">Paris</span>
-      <div class="stat-value" style="font-size:24px;">4 Nights</div>
-      <div class="stat-detail">Mar 24–28 • Accommodation TBD</div>
+    <div class="hero-stat">
+      <div class="hero-stat-value" id="statCities">2</div>
+      <div class="hero-stat-label">Cities</div>
     </div>
   </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</section>
 
-  <!-- Visual Trip Flow -->
-  <div class="card" style="margin-bottom:24px; padding:28px 24px;">
-    <span class="label" style="display:block; margin-bottom:20px;">Your Route</span>
-    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
-      <div style="text-align:center;">
-        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:20px; color:#051C2C;">Chicago</div>
-        <div style="font-size:11px; color:#9CA3AF; font-weight:500;">ORD</div>
-        <div style="font-size:11px; color:var(--signal-blue); margin-top:4px;">Mar 17</div>
-      </div>
-      <div style="display:flex; flex-direction:column; align-items:center; flex:1; max-width:60px;">
-        <div style="font-size:10px; color:#9CA3AF; margin-bottom:2px;">UA 587</div>
-        <div style="height:2px; width:100%; background:linear-gradient(90deg, var(--signal-blue), var(--signal-blue)); border-radius:1px;"></div>
-        <div style="font-size:9px; color:#9CA3AF; margin-top:2px;">via IAD</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:20px; color:#051C2C;">Paris</div>
-        <div style="font-size:11px; color:#9CA3AF; font-weight:500;">CDG → Orly</div>
-        <div style="font-size:11px; color:var(--signal-blue); margin-top:4px;">Mar 18</div>
-      </div>
-      <div style="display:flex; flex-direction:column; align-items:center; flex:1; max-width:60px;">
-        <div style="font-size:10px; color:#9CA3AF; margin-bottom:2px;">AT761</div>
-        <div style="height:2px; width:100%; background:linear-gradient(90deg, var(--signal-blue), var(--teal)); border-radius:1px;"></div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:22px; color:var(--teal); font-weight:400;">Casablanca</div>
-        <div style="font-size:11px; color:#9CA3AF; font-weight:500;">CMN</div>
-        <div style="font-size:11px; color:var(--teal); margin-top:4px;">Mar 18–22</div>
-      </div>
-      <div style="display:flex; flex-direction:column; align-items:center; flex:1; max-width:40px;">
-        <div style="height:2px; width:100%; background:var(--teal); border-radius:1px;"></div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:22px; color:var(--teal); font-weight:400;">Marrakech</div>
-        <div style="font-size:11px; color:#9CA3AF; font-weight:500;">Weekend</div>
-        <div style="font-size:11px; color:var(--teal); margin-top:4px;">Mar 22–24</div>
-      </div>
-      <div style="display:flex; flex-direction:column; align-items:center; flex:1; max-width:60px;">
-        <div style="font-size:10px; color:#9CA3AF; margin-bottom:2px;">AT776</div>
-        <div style="height:2px; width:100%; background:linear-gradient(90deg, var(--teal), var(--signal-blue)); border-radius:1px;"></div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:20px; color:#051C2C;">Paris</div>
-        <div style="font-size:11px; color:#9CA3AF; font-weight:500;">ORY</div>
-        <div style="font-size:11px; color:var(--signal-blue); margin-top:4px;">Mar 24–28</div>
-      </div>
-      <div style="display:flex; flex-direction:column; align-items:center; flex:1; max-width:60px;">
-        <div style="font-size:10px; color:#9CA3AF; margin-bottom:2px;">UA 56</div>
-        <div style="height:2px; width:100%; background:linear-gradient(90deg, var(--signal-blue), var(--signal-blue)); border-radius:1px;"></div>
-        <div style="font-size:9px; color:#9CA3AF; margin-top:2px;">via EWR</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:20px; color:#051C2C;">Chicago</div>
-        <div style="font-size:11px; color:#9CA3AF; font-weight:500;">ORD</div>
-        <div style="font-size:11px; color:var(--signal-blue); margin-top:4px;">Mar 28</div>
-      </div>
-    </div>
-    <div style="display:flex; justify-content:center; gap:24px; margin-top:20px; padding-top:16px; border-top:1px solid #E5E7EB;">
-      <div style="display:flex; align-items:center; gap:6px;">
-        <div style="width:24px; height:2px; background:var(--signal-blue); border-radius:1px;"></div>
-        <span style="font-size:11px; color:#9CA3AF;">Travel days</span>
-      </div>
-      <div style="display:flex; align-items:center; gap:6px;">
-        <div style="width:24px; height:2px; background:var(--teal); border-radius:1px;"></div>
-        <span style="font-size:11px; color:#9CA3AF;">GIM program</span>
-      </div>
-      <div style="font-size:11px; color:#9CA3AF;">12 days total</div>
+<!-- Content is dynamically rendered by JavaScript below -->
+<main id="gallery-content"></main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-title">Morocco '26</div>
+  <div class="footer-sub">Kellogg School of Management · Global Initiatives in Management</div>
+  <a href="https://drive.google.com/drive/folders/1EdQXnTxaTJ7bpp0RA87h7_vic4xj9smc" target="_blank" rel="noopener" class="drive-link">View All Photos on Google Drive</a>
+  <div class="footer-credits">Photography by <span>Connor Blaul</span></div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-controls">
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+    <div class="lightbox-actions">
+      <button class="lightbox-btn" id="lightboxDownload" title="Save photo" aria-label="Save photo">
+        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </button>
+      <button class="lightbox-btn" id="lightboxClose" title="Close" aria-label="Close">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
   </div>
-
-  <div class="card-grid">
-    <div class="card">
-      <div class="card-title">Hotels</div>
-      <div class="hotel-card" style="margin-bottom:16px; background:transparent; border:none; padding:0;">
-        <div class="hotel-city">Casablanca</div>
-        <div class="hotel-name"><a href="https://www.radissonhotels.com/en-us/hotels/radisson-gauthierlacitadelle-casablanca" target="_blank" style="color:var(--white);">Radisson Gauthier</a></div>
-        <div class="hotel-detail">Class hotel for the Casablanca portion of the trip. If arriving Tue March 17, stay is covered here (must notify GLEX).</div>
-      </div>
-      <div style="border-top:1px solid var(--border); padding-top:16px; margin-bottom:16px;">
-        <div class="hotel-city">Marrakech</div>
-        <div class="hotel-name"><a href="https://hotelpalmplaza.com/" target="_blank" style="color:var(--white);">Palm Plaza Marrakech</a></div>
-        <div class="hotel-detail">Weekend hotel for the Marrakech portion of the trip.</div>
-      </div>
-      <div style="border-top:1px solid var(--border); padding-top:16px;">
-        <div class="hotel-city">Paris • Mar 24–28</div>
-        <div class="hotel-name" style="color:var(--alert);">TBD — Need to Book</div>
-        <div class="hotel-detail">4 nights (Tue–Fri). Check Airbnb, Booking.com, or hotels near central Paris. Budget for sightseeing + Bordeaux day trip.</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Cultural Excursions</div>
-      <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-        <div style="display:flex; gap:10px; align-items:start; margin-bottom:8px;">
-          <span style="color:var(--teal);">◆</span>
-          <span><a href="https://www.fmh2.ma/en" target="_blank">Hassan II Mosque</a> + Art Deco Tour of Casablanca</span>
-        </div>
-        <div style="display:flex; gap:10px; align-items:start; margin-bottom:8px;">
-          <span style="color:var(--teal);">◆</span>
-          <span>Excursion to Rabat — <a href="https://www.google.com/maps/place/Archaeological+Museum+of+Rabat/" target="_blank">Archaeological Museum</a> &amp; <a href="https://www.google.com/maps/place/Kasbah+of+the+Udayas/" target="_blank">Oudaya Kasbah</a></span>
-        </div>
-        <div style="display:flex; gap:10px; align-items:start; margin-bottom:8px;">
-          <span style="color:var(--teal);">◆</span>
-          <span><a href="https://www.google.com/maps/place/Agafay+Desert/" target="_blank">Day Trip to Agafay Desert</a></span>
-        </div>
-        <div style="display:flex; gap:10px; align-items:start;">
-          <span style="color:var(--teal);">◆</span>
-          <span>City Tour</span>
-        </div>
-        <div style="margin-top:12px; font-size:12px; color:var(--text-muted); font-style:italic;">Excursions may change slightly</div>
-      </div>
-    </div>
+  <button class="lightbox-btn lightbox-nav prev" id="lightboxPrev" aria-label="Previous photo">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <div class="lightbox-img-container">
+    <img id="lightbox-img" src="" alt="" draggable="false">
   </div>
-
-  <div class="insight" style="margin-top:8px;">
-    <p><strong>Early Arrival Option:</strong> If you arrive in Casablanca on Tuesday, March 17th, the class hotel (Radisson Gauthier) will cover your stay. You MUST notify GLEX. Program officially begins Thursday, March 19th morning.</p>
-  </div>
-
-  <div class="insight alert-border">
-    <p><strong>TSA Advisory:</strong> Security lines are long right now. There may be delays — plan accordingly and arrive early for your flights.</p>
-  </div>
-</div>
-
-<!-- ============ FLIGHTS ============ -->
-<div class="section" id="flights">
-  <div class="section-title">Flight Schedule</div>
-  <div class="section-subtitle">All flights for the complete trip. Chicago → Paris (Charles de Gaulle) → transfer to Orly → Casablanca → (trip) → Paris (Orly) → Chicago.</div>
-
-  <span class="label" style="display:block; margin-bottom:16px; color:var(--teal);">Outbound — Chicago to Casablanca</span>
-
-  <!-- Flight 1: ORD to IAD -->
-  <div class="card">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-      <span class="label">Leg 1 — United Airlines</span>
-      <span style="font-size:12px; color:var(--text-muted);">Mon, March 17, 2026</span>
-    </div>
-    <div style="display:flex; align-items:center; gap:20px; margin:16px 0;">
-      <div>
-        <div class="stat-value" style="font-size:28px;">2:30 PM</div>
-        <div style="font-size:14px; color:var(--white); font-weight:500;">ORD</div>
-        <div style="font-size:12px; color:var(--text-muted);">Chicago, IL</div>
-      </div>
-      <div style="flex:1; text-align:center;">
-        <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">2h 00m</div>
-        <div style="height:2px; background:linear-gradient(90deg, var(--signal-blue), var(--teal)); border-radius:1px;"></div>
-        <div style="font-size:11px; color:var(--text-muted); margin-top:4px;">UA 587 • Boeing 737-900</div>
-      </div>
-      <div style="text-align:right;">
-        <div class="stat-value" style="font-size:28px;">5:30 PM</div>
-        <div style="font-size:14px; color:var(--white); font-weight:500;">IAD</div>
-        <div style="font-size:12px; color:var(--text-muted);">Washington, DC</div>
-      </div>
-    </div>
-    <div style="font-size:11px; color:var(--text-muted);">United Economy • Snacks for Purchase</div>
-  </div>
-
-  <!-- Flight 2: IAD to CDG -->
-  <div class="card">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-      <span class="label">Leg 2 — United Airlines</span>
-      <span style="font-size:12px; color:var(--text-muted);">Mon, March 17 → Tue, March 18</span>
-    </div>
-    <div style="display:flex; align-items:center; gap:20px; margin:16px 0;">
-      <div>
-        <div class="stat-value" style="font-size:28px;">6:20 PM</div>
-        <div style="font-size:14px; color:var(--white); font-weight:500;">IAD</div>
-        <div style="font-size:12px; color:var(--text-muted);">Washington, DC</div>
-      </div>
-      <div style="flex:1; text-align:center;">
-        <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">7h 35m • Overnight</div>
-        <div style="height:2px; background:linear-gradient(90deg, var(--signal-blue), var(--teal)); border-radius:1px;"></div>
-        <div style="font-size:11px; color:var(--text-muted); margin-top:4px;">UA 915</div>
-      </div>
-      <div style="text-align:right;">
-        <div class="stat-value" style="font-size:28px;">6:55 AM</div>
-        <div style="font-size:14px; color:var(--white); font-weight:500;">CDG <span style="color:var(--teal); font-size:11px;">+1</span></div>
-        <div style="font-size:12px; color:var(--text-muted);">Paris, France</div>
-      </div>
-    </div>
-    <div style="font-size:11px; color:var(--text-muted);">United Economy • Meal Included</div>
-  </div>
-
-  <!-- CHARLES DE GAULLE → ORLY TRANSFER GUIDE -->
-  <div class="card" style="border-color:var(--teal); border-width:1.5px;">
-    <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-      <div style="background:rgba(10,124,106,0.1); padding:8px 12px; border-radius:2px;">
-        <span style="font-size:18px;">🔄</span>
-      </div>
-      <div>
-        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:22px; color:var(--white);">Airport Transfer: Charles de Gaulle → Orly</div>
-        <div style="font-size:12px; color:var(--teal); font-weight:600; letter-spacing:1.5px; text-transform:uppercase;">Critical • Allow 3–4 hours</div>
-      </div>
-    </div>
-
-    <div class="insight alert-border" style="margin-bottom:16px;">
-      <p><strong>Why this matters:</strong> You land at <strong>Charles de Gaulle</strong> Terminal 1 (United) at 6:55 AM and depart from <strong>Orly</strong> Terminal 4 (Royal Air Maroc) at 12:10 PM. These are <strong>separate tickets on separate airlines</strong> — your bags will NOT auto-transfer. You must collect your checked luggage at Charles de Gaulle and re-check at Orly.</p>
-    </div>
-
-    <span class="label" style="display:block; margin-bottom:4px; color:var(--teal);">Recommended Route — RER B + Metro Line 14</span>
-    <div style="font-size:12px; color:var(--text-muted); margin-bottom:16px;">~70 min total • ~€14 • Fewest transfers, easiest with luggage</div>
-
-    <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2.0;">
-      <div style="display:flex; gap:12px; margin-bottom:12px;">
-        <div style="min-width:28px; height:28px; background:var(--signal-blue); border-radius:2px; display:flex; align-items:center; justify-content:center; color:white; font-weight:600; font-size:13px; flex-shrink:0;">1</div>
-        <div><strong style="color:var(--white);">Land at Charles de Gaulle Terminal 1</strong> (6:55 AM) — United flies into Terminal 1. Follow signs for <strong style="color:var(--white);">"Baggage Claim / Sortie"</strong> (Exit). Go through passport control (EU entry) and collect your checked bags from the carousel.</div>
-      </div>
-
-      <div style="display:flex; gap:12px; margin-bottom:12px;">
-        <div style="min-width:28px; height:28px; background:var(--signal-blue); border-radius:2px; display:flex; align-items:center; justify-content:center; color:white; font-weight:600; font-size:13px; flex-shrink:0;">2</div>
-        <div><strong style="color:var(--white);">Follow signs to RER B trains.</strong> From Terminal 1, take the free CDGVAL shuttle to the <strong style="color:var(--white);">"Aéroport Charles de Gaulle 1"</strong> RER B station. Look for signs saying "RER B" or "Trains."</div>
-      </div>
-
-      <div style="display:flex; gap:12px; margin-bottom:12px;">
-        <div style="min-width:28px; height:28px; background:var(--signal-blue); border-radius:2px; display:flex; align-items:center; justify-content:center; color:white; font-weight:600; font-size:13px; flex-shrink:0;">3</div>
-        <div><strong style="color:var(--white);">Buy a "Paris Region ↔ Airports" ticket</strong> (~€14) at the ticket machines. This single ticket covers both the RER B and Metro Line 14 all the way to Orly. You can also buy on your phone via the <strong style="color:var(--white);">Île-de-France Mobilités</strong> app.</div>
-      </div>
-
-      <div style="display:flex; gap:12px; margin-bottom:12px;">
-        <div style="min-width:28px; height:28px; background:var(--signal-blue); border-radius:2px; display:flex; align-items:center; justify-content:center; color:white; font-weight:600; font-size:13px; flex-shrink:0;">4</div>
-        <div><strong style="color:var(--white);">Take RER B southbound to Châtelet–Les Halles</strong> (~35 min). Any RER B train heading toward Paris will stop here — it's a major hub. You can't miss it.</div>
-      </div>
-
-      <div style="display:flex; gap:12px; margin-bottom:12px;">
-        <div style="min-width:28px; height:28px; background:var(--signal-blue); border-radius:2px; display:flex; align-items:center; justify-content:center; color:white; font-weight:600; font-size:13px; flex-shrink:0;">5</div>
-        <div><strong style="color:var(--white);">Transfer to Metro Line 14 at Châtelet–Les Halles.</strong> Follow signs for <strong style="color:var(--white);">Line 14 → Aéroport d'Orly</strong>. This is a modern, automated metro — it's fast and runs frequently. Orly is the <strong style="color:var(--white);">last stop</strong> (~30 min).</div>
-      </div>
-
-      <div style="display:flex; gap:12px; margin-bottom:4px;">
-        <div style="min-width:28px; height:28px; background:var(--teal); border-radius:2px; display:flex; align-items:center; justify-content:center; color:white; font-weight:600; font-size:13px; flex-shrink:0;">6</div>
-        <div><strong style="color:var(--white);">Arrive at Orly, walk to Terminal 4.</strong> Metro 14 drops you at Terminal 1-2-3. Follow signs to <strong style="color:var(--white);">Terminal 4</strong> (short walk or free shuttle). Head to Royal Air Maroc check-in counters, drop your bags, and go through security. Aim to arrive by <strong style="color:var(--teal);">~10:00 AM</strong> for a 12:10 PM departure.</div>
-      </div>
-    </div>
-
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px;">
-      <div class="insight" style="margin-bottom:0;">
-        <p><strong>Alternative: Taxi or Uber</strong><br>If you'd rather skip public transit with luggage, a taxi from Charles de Gaulle → Orly runs 40–70 min and costs ~€57–95 depending on traffic. Follow signs for "Taxis" at arrivals. Faster, zero hassle — split with classmates to save.</p>
-      </div>
-      <div class="insight teal-border" style="margin-bottom:0;">
-        <p><strong>Timeline Estimate (Train + Metro)</strong><br>
-        6:55 AM — Land at Charles de Gaulle<br>
-        ~7:30 AM — Clear passport + bags<br>
-        ~7:45 AM — Board RER B<br>
-        ~8:20 AM — Arrive Châtelet–Les Halles<br>
-        ~8:30 AM — Board Metro Line 14<br>
-        ~9:00 AM — Arrive Orly<br>
-        ~9:15 AM — Check in Royal Air Maroc</p>
-      </div>
-    </div>
-
-    <div class="insight alert-border" style="margin-top:16px; margin-bottom:0;">
-      <p><strong>Important:</strong> These are separate tickets on separate airlines — if your United flight is delayed and you miss the Royal Air Maroc flight, they are not obligated to rebook you. Build in buffer time. The 5-hour window is generous if everything runs smoothly.</p>
-    </div>
-  </div>
-
-  <!-- Flight 3: ORY to CMN -->
-  <div class="card">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-      <span class="label">Leg 3 — Royal Air Maroc</span>
-      <span style="font-size:12px; color:var(--text-muted);">Wed, March 18, 2026</span>
-    </div>
-    <div style="display:flex; align-items:center; gap:20px; margin:16px 0;">
-      <div>
-        <div class="stat-value" style="font-size:28px;">12:10 PM</div>
-        <div style="font-size:14px; color:var(--white); font-weight:500;">ORY</div>
-        <div style="font-size:12px; color:var(--text-muted);">Paris Orly, T4</div>
-      </div>
-      <div style="flex:1; text-align:center;">
-        <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">3h 05m</div>
-        <div style="height:2px; background:linear-gradient(90deg, var(--signal-blue), var(--teal)); border-radius:1px;"></div>
-        <div style="font-size:11px; color:var(--text-muted); margin-top:4px;">AT761 • Boeing 737 MAX 8</div>
-      </div>
-      <div style="text-align:right;">
-        <div class="stat-value" style="font-size:28px;">2:15 PM</div>
-        <div style="font-size:14px; color:var(--white); font-weight:500;">CMN</div>
-        <div style="font-size:12px; color:var(--text-muted);">Casablanca, T2</div>
-      </div>
-    </div>
-  </div>
-
-  <span class="label" style="display:block; margin:28px 0 16px; color:var(--alert);">Return — Casablanca to Paris</span>
-
-  <!-- Flight 4: CMN to ORY -->
-  <div class="card">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-      <span class="label">Leg 4 — Royal Air Maroc</span>
-      <span style="font-size:12px; color:var(--text-muted);">Tue, March 24, 2026</span>
-    </div>
-    <div style="display:flex; align-items:center; gap:20px; margin:16px 0;">
-      <div>
-        <div class="stat-value" style="font-size:28px;">6:30 PM</div>
-        <div style="font-size:14px; color:var(--white); font-weight:500;">CMN</div>
-        <div style="font-size:12px; color:var(--text-muted);">Casablanca, T1</div>
-      </div>
-      <div style="flex:1; text-align:center;">
-        <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">2h 55m</div>
-        <div style="height:2px; background:linear-gradient(90deg, var(--signal-blue), var(--teal)); border-radius:1px;"></div>
-        <div style="font-size:11px; color:var(--text-muted); margin-top:4px;">AT776 • Boeing 737-800</div>
-      </div>
-      <div style="text-align:right;">
-        <div class="stat-value" style="font-size:28px;">9:25 PM</div>
-        <div style="font-size:14px; color:var(--white); font-weight:500;">ORY</div>
-        <div style="font-size:12px; color:var(--text-muted);">Paris Orly, T4</div>
-      </div>
-    </div>
-    <div class="insight" style="margin-top:12px; margin-bottom:0;">
-      <p><strong>Paris Free Time:</strong> Mar 24 evening through Mar 28 morning — ~3.5 days in Paris with the smaller group.</p>
-    </div>
-  </div>
-
-  <span class="label" style="display:block; margin:28px 0 16px; color:var(--signal-blue);">Final Return — Paris to Chicago</span>
-
-  <!-- Flight 5: CDG to EWR -->
-  <div class="card">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-      <span class="label">Leg 5 — United Airlines</span>
-      <span style="font-size:12px; color:var(--text-muted);">Sat, March 28, 2026</span>
-    </div>
-    <div style="display:flex; align-items:center; gap:20px; margin:16px 0;">
-      <div>
-        <div class="stat-value" style="font-size:28px;">9:25 AM</div>
-        <div style="font-size:14px; color:var(--white); font-weight:500;">CDG</div>
-        <div style="font-size:12px; color:var(--text-muted);">Paris, France</div>
-      </div>
-      <div style="flex:1; text-align:center;">
-        <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">8h 25m</div>
-        <div style="height:2px; background:linear-gradient(90deg, var(--signal-blue), var(--teal)); border-radius:1px;"></div>
-        <div style="font-size:11px; color:var(--text-muted); margin-top:4px;">UA 56 • Boeing 777-200</div>
-      </div>
-      <div style="text-align:right;">
-        <div class="stat-value" style="font-size:28px;">12:50 PM</div>
-        <div style="font-size:14px; color:var(--white); font-weight:500;">EWR</div>
-        <div style="font-size:12px; color:var(--text-muted);">Newark, NJ</div>
-      </div>
-    </div>
-    <div style="font-size:11px; color:var(--text-muted);">United Economy • Meal Included • Terminal change at EWR</div>
-  </div>
-
-  <!-- Flight 6: EWR to ORD -->
-  <div class="card">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-      <span class="label">Leg 6 — United Airlines</span>
-      <span style="font-size:12px; color:var(--text-muted);">Sat, March 28, 2026</span>
-    </div>
-    <div style="display:flex; align-items:center; gap:20px; margin:16px 0;">
-      <div>
-        <div class="stat-value" style="font-size:28px;">2:20 PM</div>
-        <div style="font-size:14px; color:var(--white); font-weight:500;">EWR</div>
-        <div style="font-size:12px; color:var(--text-muted);">Newark, NJ</div>
-      </div>
-      <div style="flex:1; text-align:center;">
-        <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">2h 43m</div>
-        <div style="height:2px; background:linear-gradient(90deg, var(--signal-blue), var(--teal)); border-radius:1px;"></div>
-        <div style="font-size:11px; color:var(--text-muted); margin-top:4px;">UA 1168</div>
-      </div>
-      <div style="text-align:right;">
-        <div class="stat-value" style="font-size:28px;">4:03 PM</div>
-        <div style="font-size:14px; color:var(--white); font-weight:500;">ORD</div>
-        <div style="font-size:12px; color:var(--text-muted);">Chicago, IL</div>
-      </div>
-    </div>
-    <div style="font-size:11px; color:var(--text-muted);">Home! 🏠</div>
-  </div>
-</div>
-
-<!-- ============ CALENDAR ============ -->
-<div class="section" id="calendar">
-  <div class="section-title">Trip Calendar</div>
-  <div class="section-subtitle">Visual day-by-day view of the full trip. March 17–28, 2026.</div>
-
-  <div class="card" style="padding:0; overflow:hidden;">
-    <!-- Calendar Header -->
-    <div style="display:grid; grid-template-columns:repeat(7, 1fr); background:#051C2C;">
-      <div style="padding:12px 8px; text-align:center; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.7);">Mon</div>
-      <div style="padding:12px 8px; text-align:center; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.7);">Tue</div>
-      <div style="padding:12px 8px; text-align:center; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.7);">Wed</div>
-      <div style="padding:12px 8px; text-align:center; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.7);">Thu</div>
-      <div style="padding:12px 8px; text-align:center; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.7);">Fri</div>
-      <div style="padding:12px 8px; text-align:center; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.7);">Sat</div>
-      <div style="padding:12px 8px; text-align:center; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.7);">Sun</div>
-    </div>
-
-    <!-- Week 1: Mar 16-22 -->
-    <div style="display:grid; grid-template-columns:repeat(7, 1fr); border-bottom:1px solid var(--border);">
-      <!-- Mon Mar 16 - empty/before trip -->
-      <div style="padding:12px; min-height:120px; border-right:1px solid var(--border); background:#FAFAFA;">
-        <div style="font-size:12px; color:#D1D5DB; font-weight:500;">16</div>
-      </div>
-      <!-- Tue Mar 17 - Depart Chicago -->
-      <div style="padding:12px; min-height:120px; border-right:1px solid var(--border); background:rgba(15,82,152,0.04);">
-        <div style="font-size:14px; color:var(--signal-blue); font-weight:600;">17</div>
-        <div style="margin-top:6px; padding:4px 6px; background:var(--signal-blue); border-radius:2px; font-size:10px; color:white; font-weight:600; letter-spacing:0.5px;">✈ DEPART</div>
-        <div style="font-size:11px; color:var(--text-body); margin-top:4px; line-height:1.5;">ORD → IAD → CDG<br><span style="color:var(--text-muted);">Overnight flight</span></div>
-      </div>
-      <!-- Wed Mar 18 - Arrive Casablanca -->
-      <div style="padding:12px; min-height:120px; border-right:1px solid var(--border); background:rgba(10,124,106,0.04);">
-        <div style="font-size:14px; color:var(--teal); font-weight:600;">18</div>
-        <div style="margin-top:6px; padding:4px 6px; background:var(--teal); border-radius:2px; font-size:10px; color:white; font-weight:600; letter-spacing:0.5px;">ARRIVE CASA</div>
-        <div style="font-size:11px; color:var(--text-body); margin-top:4px; line-height:1.5;">CDG → ORY → CMN<br><span style="color:var(--text-muted);">Radisson Gauthier</span></div>
-      </div>
-      <!-- Thu Mar 19 - Program Begins -->
-      <div style="padding:12px; min-height:120px; border-right:1px solid var(--border); background:rgba(10,124,106,0.06);">
-        <div style="font-size:14px; color:var(--teal); font-weight:600;">19</div>
-        <div style="margin-top:6px; padding:4px 6px; background:var(--teal); border-radius:2px; font-size:10px; color:white; font-weight:600; letter-spacing:0.5px;">GIM BEGINS</div>
-        <div style="font-size:11px; color:var(--text-body); margin-top:4px; line-height:1.5;">Plenary meetings<br><span style="color:var(--text-muted);">Business casual/suit</span></div>
-      </div>
-      <!-- Fri Mar 20 - Casablanca Program -->
-      <div style="padding:12px; min-height:120px; border-right:1px solid var(--border); background:rgba(10,124,106,0.04);">
-        <div style="font-size:14px; color:var(--teal); font-weight:600;">20</div>
-        <div style="margin-top:6px; padding:4px 6px; background:rgba(10,124,106,0.15); border-radius:2px; font-size:10px; color:var(--teal); font-weight:600; letter-spacing:0.5px;">CASABLANCA</div>
-        <div style="font-size:11px; color:var(--text-body); margin-top:4px; line-height:1.5;">Program day<br><span style="color:var(--text-muted);">Hassan II Mosque</span></div>
-      </div>
-      <!-- Sat Mar 21 - Cultural Excursions -->
-      <div style="padding:12px; min-height:120px; border-right:1px solid var(--border); background:rgba(10,124,106,0.04);">
-        <div style="font-size:14px; color:var(--teal); font-weight:600;">21</div>
-        <div style="margin-top:6px; padding:4px 6px; background:rgba(10,124,106,0.15); border-radius:2px; font-size:10px; color:var(--teal); font-weight:600; letter-spacing:0.5px;">EXCURSIONS</div>
-        <div style="font-size:11px; color:var(--text-body); margin-top:4px; line-height:1.5;">Rabat day trip<br><span style="color:var(--text-muted);">Art Deco Tour</span></div>
-      </div>
-      <!-- Sun Mar 22 - Travel to Marrakech -->
-      <div style="padding:12px; min-height:120px; background:rgba(10,124,106,0.06);">
-        <div style="font-size:14px; color:var(--teal); font-weight:600;">22</div>
-        <div style="margin-top:6px; padding:4px 6px; background:var(--teal); border-radius:2px; font-size:10px; color:white; font-weight:600; letter-spacing:0.5px;">→ MARRAKECH</div>
-        <div style="font-size:11px; color:var(--text-body); margin-top:4px; line-height:1.5;">Travel day<br><span style="color:var(--text-muted);">Palm Plaza Hotel</span></div>
-      </div>
-    </div>
-
-    <!-- Week 2: Mar 23-29 -->
-    <div style="display:grid; grid-template-columns:repeat(7, 1fr);">
-      <!-- Mon Mar 23 - Marrakech -->
-      <div style="padding:12px; min-height:120px; border-right:1px solid var(--border); background:rgba(10,124,106,0.04);">
-        <div style="font-size:14px; color:var(--teal); font-weight:600;">23</div>
-        <div style="margin-top:6px; padding:4px 6px; background:rgba(10,124,106,0.15); border-radius:2px; font-size:10px; color:var(--teal); font-weight:600; letter-spacing:0.5px;">MARRAKECH</div>
-        <div style="font-size:11px; color:var(--text-body); margin-top:4px; line-height:1.5;">Agafay Desert<br><span style="color:var(--text-muted);">City Tour / Souks</span></div>
-      </div>
-      <!-- Tue Mar 24 - Depart to Paris -->
-      <div style="padding:12px; min-height:120px; border-right:1px solid var(--border); background:rgba(15,82,152,0.06);">
-        <div style="font-size:14px; color:var(--signal-blue); font-weight:600;">24</div>
-        <div style="margin-top:6px; padding:4px 6px; background:var(--signal-blue); border-radius:2px; font-size:10px; color:white; font-weight:600; letter-spacing:0.5px;">✈ → PARIS</div>
-        <div style="font-size:11px; color:var(--text-body); margin-top:4px; line-height:1.5;">CMN 6:30 PM<br>ORY 9:25 PM<br><span style="color:var(--text-muted);">Paris hotel TBD</span></div>
-      </div>
-      <!-- Wed Mar 25 - Paris Day 1 -->
-      <div style="padding:12px; min-height:120px; border-right:1px solid var(--border); background:rgba(15,82,152,0.04);">
-        <div style="font-size:14px; color:var(--signal-blue); font-weight:600;">25</div>
-        <div style="margin-top:6px; padding:4px 6px; background:rgba(15,82,152,0.15); border-radius:2px; font-size:10px; color:var(--signal-blue); font-weight:600; letter-spacing:0.5px;">PARIS</div>
-        <div style="font-size:11px; color:var(--text-body); margin-top:4px; line-height:1.5;">Eiffel Tower, Louvre<br>Notre-Dame, Seine<br><span style="color:var(--text-muted);">First time in Paris!</span></div>
-      </div>
-      <!-- Thu Mar 26 - Bordeaux -->
-      <div style="padding:12px; min-height:120px; border-right:1px solid var(--border); background:rgba(15,82,152,0.06);">
-        <div style="font-size:14px; color:var(--signal-blue); font-weight:600;">26</div>
-        <div style="margin-top:6px; padding:4px 6px; background:var(--signal-blue); border-radius:2px; font-size:10px; color:white; font-weight:600; letter-spacing:0.5px;">🚄 BORDEAUX</div>
-        <div style="font-size:11px; color:var(--text-body); margin-top:4px; line-height:1.5;">TGV day trip<br>Wine region tour<br><span style="color:var(--text-muted);">Return to Paris PM</span></div>
-      </div>
-      <!-- Fri Mar 27 - Paris Day 2 -->
-      <div style="padding:12px; min-height:120px; border-right:1px solid var(--border); background:rgba(15,82,152,0.04);">
-        <div style="font-size:14px; color:var(--signal-blue); font-weight:600;">27</div>
-        <div style="margin-top:6px; padding:4px 6px; background:rgba(15,82,152,0.15); border-radius:2px; font-size:10px; color:var(--signal-blue); font-weight:600; letter-spacing:0.5px;">PARIS</div>
-        <div style="font-size:11px; color:var(--text-body); margin-top:4px; line-height:1.5;">Musée d'Orsay<br>Luxembourg Gardens<br><span style="color:var(--text-muted);">Final French dinner</span></div>
-      </div>
-      <!-- Sat Mar 28 - Fly Home -->
-      <div style="padding:12px; min-height:120px; border-right:1px solid var(--border); background:rgba(217,79,79,0.04);">
-        <div style="font-size:14px; color:var(--alert); font-weight:600;">28</div>
-        <div style="margin-top:6px; padding:4px 6px; background:var(--alert); border-radius:2px; font-size:10px; color:white; font-weight:600; letter-spacing:0.5px;">✈ HOME</div>
-        <div style="font-size:11px; color:var(--text-body); margin-top:4px; line-height:1.5;">CDG → EWR → ORD<br><span style="color:var(--text-muted);">Home by 4 PM</span></div>
-      </div>
-      <!-- Sun Mar 29 - after trip -->
-      <div style="padding:12px; min-height:120px; background:#FAFAFA;">
-        <div style="font-size:12px; color:#D1D5DB; font-weight:500;">29</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Legend -->
-  <div style="display:flex; gap:20px; margin-top:16px; flex-wrap:wrap;">
-    <div style="display:flex; align-items:center; gap:8px;">
-      <div style="width:12px; height:12px; background:var(--signal-blue); border-radius:2px;"></div>
-      <span style="font-size:12px; color:var(--text-muted);">Travel / Paris</span>
-    </div>
-    <div style="display:flex; align-items:center; gap:8px;">
-      <div style="width:12px; height:12px; background:var(--teal); border-radius:2px;"></div>
-      <span style="font-size:12px; color:var(--text-muted);">Morocco / GIM Program</span>
-    </div>
-    <div style="display:flex; align-items:center; gap:8px;">
-      <div style="width:12px; height:12px; background:var(--alert); border-radius:2px;"></div>
-      <span style="font-size:12px; color:var(--text-muted);">Return Home</span>
-    </div>
-  </div>
-
-  <!-- Accommodation Summary -->
-  <div class="card" style="margin-top:24px;">
-    <span class="label" style="display:block; margin-bottom:16px;">Where You're Staying</span>
-    <div class="card-grid-3">
-      <div>
-        <div style="font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:6px;">Casablanca • 4 Nights</div>
-        <div style="font-family:'Instrument Serif',serif; font-size:18px; color:#051C2C; margin-bottom:4px;">Radisson Gauthier</div>
-        <div style="font-size:12px; color:var(--text-muted);">Mar 18–22 • Class hotel</div>
-      </div>
-      <div>
-        <div style="font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:6px;">Marrakech • 2 Nights</div>
-        <div style="font-family:'Instrument Serif',serif; font-size:18px; color:#051C2C; margin-bottom:4px;">Palm Plaza</div>
-        <div style="font-size:12px; color:var(--text-muted);">Mar 22–24 • Weekend hotel</div>
-      </div>
-      <div>
-        <div style="font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--signal-blue); margin-bottom:6px;">Paris • 4 Nights</div>
-        <div style="font-family:'Instrument Serif',serif; font-size:18px; color:var(--alert); margin-bottom:4px;">TBD — Need to Book</div>
-        <div style="font-size:12px; color:var(--text-muted);">Mar 24–28 • Personal extension</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ============ ITINERARY ============ -->
-<div class="section" id="itinerary">
-  <div class="section-title">Day-by-Day Itinerary</div>
-  <div class="section-subtitle">Full itinerary is being built in the Google Sheet. Below is the high-level schedule based on available information. Connor's personal travel plan: Chicago → Paris → Casablanca → Marrakech → Casablanca → Paris → Chicago.</div>
-
-  <div class="insight" style="margin-bottom:24px;">
-    <p><strong>Note:</strong> The detailed daily itinerary is being built by Christine in the <a href="https://docs.google.com/spreadsheets/d/1CB_hR7O9C70vENhYOLKGt4rquSaIvUKMQIi6vX5Ygw8/edit?usp=sharing" target="_blank">Google Sheet</a>. Check there for the latest updates.</p>
-  </div>
-
-  <div class="card">
-    <div class="timeline-item">
-      <div class="timeline-date">
-        <div class="day">Tuesday</div>
-        <div class="date">March 17</div>
-      </div>
-      <div class="timeline-marker">
-        <div class="timeline-dot"></div>
-        <div class="timeline-line"></div>
-      </div>
-      <div class="timeline-content">
-        <h3>Depart Chicago → Paris → Casablanca</h3>
-        <p>ORD 2:30 PM → IAD 5:30 PM (UA 587), then IAD 6:20 PM → CDG 6:55 AM+1 (UA 915, overnight). Land in Paris Tuesday morning. Transfer CDG → ORY. Fly ORY 12:10 PM → CMN 2:15 PM (AT761). Arrive Casablanca 2:15 PM Wednesday. Hotel covered at Radisson Gauthier.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">
-        <div class="day">Wednesday</div>
-        <div class="date">March 18</div>
-      </div>
-      <div class="timeline-marker">
-        <div class="timeline-dot teal"></div>
-        <div class="timeline-line"></div>
-      </div>
-      <div class="timeline-content">
-        <h3>Arrival Day — Casablanca</h3>
-        <p>Must arrive by evening. Check into Radisson Gauthier, Casablanca. Meet fellow GIM travelers. Settle in before the program starts tomorrow.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">
-        <div class="day">Thursday</div>
-        <div class="date">March 19</div>
-      </div>
-      <div class="timeline-marker">
-        <div class="timeline-dot teal"></div>
-        <div class="timeline-line"></div>
-      </div>
-      <div class="timeline-content">
-        <h3>Program Begins — Casablanca</h3>
-        <p>Official start of GIM program. Plenary meetings begin. Business casual / business suit required. Check Google Sheet for detailed schedule.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">
-        <div class="day">Fri–Mon</div>
-        <div class="date">March 20–23</div>
-      </div>
-      <div class="timeline-marker">
-        <div class="timeline-dot"></div>
-        <div class="timeline-line"></div>
-      </div>
-      <div class="timeline-content">
-        <h3>Casablanca &amp; Marrakech Weekend</h3>
-        <p>Cultural excursions including Hassan II Mosque, Art Deco Tour, potential Rabat day trip, Agafay Desert excursion, and city tours. Weekend transition to Palm Plaza Marrakech.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">
-        <div class="day">Tuesday</div>
-        <div class="date">March 24</div>
-      </div>
-      <div class="timeline-marker">
-        <div class="timeline-dot"></div>
-        <div class="timeline-line"></div>
-      </div>
-      <div class="timeline-content">
-        <h3>Depart Morocco → Paris</h3>
-        <p>CMN 6:30 PM → ORY 9:25 PM (AT776, Royal Air Maroc). Class portion of the trip ends. Arrive Paris late evening. Check into Paris accommodation (TBD).</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">
-        <div class="day">Wednesday</div>
-        <div class="date">March 25</div>
-      </div>
-      <div class="timeline-marker">
-        <div class="timeline-dot teal"></div>
-        <div class="timeline-line"></div>
-      </div>
-      <div class="timeline-content">
-        <h3>Paris — Full Day Exploring</h3>
-        <p>First time in Paris! Hit the major sights: Eiffel Tower, Louvre, Notre-Dame, Arc de Triomphe, Sacré-Cœur. Walk the Seine, explore Le Marais. Enjoy French cuisine — croissants, bistro lunch, evening dinner at a classic brasserie. See the Recommendations tab for food spots.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">
-        <div class="day">Thursday</div>
-        <div class="date">March 26</div>
-      </div>
-      <div class="timeline-marker">
-        <div class="timeline-dot"></div>
-        <div class="timeline-line"></div>
-      </div>
-      <div class="timeline-content">
-        <h3>Day Trip — Bordeaux Wine Region</h3>
-        <p>Take the TGV high-speed train from Paris Montparnasse to Bordeaux (~2h 15m). Explore the wine region — vineyard tours, tastings, historic city center (UNESCO World Heritage). Train back to Paris in the evening.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">
-        <div class="day">Friday</div>
-        <div class="date">March 27</div>
-      </div>
-      <div class="timeline-marker">
-        <div class="timeline-dot"></div>
-        <div class="timeline-line"></div>
-      </div>
-      <div class="timeline-content">
-        <h3>Paris — Second Day Exploring</h3>
-        <p>Deeper Paris: Musée d'Orsay, Luxembourg Gardens, Saint-Germain-des-Prés neighborhood. Visit a classic Parisian market. Final French dinner before departure. Pack and prepare for morning flight.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">
-        <div class="day">Saturday</div>
-        <div class="date">March 28</div>
-      </div>
-      <div class="timeline-marker">
-        <div class="timeline-dot alert"></div>
-        <div class="timeline-line"></div>
-      </div>
-      <div class="timeline-content">
-        <h3>Paris → Chicago — Home</h3>
-        <p>CDG 9:25 AM → EWR 12:50 PM (UA 56), then EWR 2:20 PM → ORD 4:03 PM (UA 1168). Terminal change at Newark. Home by 4 PM Saturday.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ============ PRE-TRIP CHECKLIST ============ -->
-<div class="section" id="checklist">
-  <div class="section-title">Pre-Trip Checklist</div>
-  <div class="section-subtitle">Everything you need to do before departure. Click items to mark them complete.</div>
-
-  <div class="card">
-    <span class="label" style="display:block; margin-bottom:16px; color:var(--alert);">Action Required</span>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Complete Roster Tab in Google Sheet</strong> — Enter passport info and new flight details.
-        <a href="https://docs.google.com/spreadsheets/d/1CB_hR7O9C70vENhYOLKGt4rquSaIvUKMQIi6vX5Ygw8/edit?usp=sharing" target="_blank" onclick="event.stopPropagation();" style="display:block; margin-top:4px;">→ Open Google Sheet</a>
-        <span class="checklist-label label-urgent">URGENT</span>
-      </div>
-    </div>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Purchase Trip Insurance</strong> — Strongly recommended by GLEX.
-        <span class="checklist-label label-action">ACTION</span>
-      </div>
-    </div>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Book Flights</strong> — Must arrive Casablanca by late Wednesday March 18 (or Tuesday March 17 with GLEX notification). Depart any time AM Thursday March 26.
-        <span class="checklist-label label-urgent">URGENT</span>
-      </div>
-    </div>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Re-enroll in STEP Program</strong> — Update with new cities/dates for State Department notifications.
-        <a href="https://step.state.gov/" target="_blank" onclick="event.stopPropagation();" style="display:block; margin-top:4px;">→ STEP Program</a>
-        <span class="checklist-label label-action">ACTION</span>
-      </div>
-    </div>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Check Student Roles Tab</strong> — Christine switched up some student roles. Verify yours in the Google Sheet.
-        <span class="checklist-label label-action">ACTION</span>
-      </div>
-    </div>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Save Emergency Card to Phone</strong> — Download the attached Emergency Card PDF and save a copy on your phone.
-        <span class="checklist-label label-action">ACTION</span>
-      </div>
-    </div>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Read Morocco Travel Guide</strong> — Read prior to travel and on the plane. Includes country background, cultural guidance, and visa info.
-        <span class="checklist-label label-action">ACTION</span>
-      </div>
-    </div>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Join New WhatsApp Group</strong> — Be on the lookout for the new group chat invitation.
-        <span class="checklist-label label-action">ACTION</span>
-      </div>
-    </div>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Book Paris Accommodation</strong> — Need lodging for Tue Mar 24, Wed Mar 25, Thu Mar 26, Fri Mar 27 (4 nights). Check-in evening of Mar 24, checkout morning of Mar 28.
-        <span class="checklist-label label-urgent">URGENT</span>
-      </div>
-    </div>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Book Bordeaux Train Tickets</strong> — TGV from Paris Montparnasse to Bordeaux for Thu Mar 26. Round trip, return same evening.
-        <span class="checklist-label label-action">ACTION</span>
-      </div>
-    </div>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Check Weather Forecast</strong> — Rain is in the forecast. Pack accordingly.
-        <span class="checklist-label label-pack">PACK</span>
-      </div>
-    </div>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Download Careem Rideshare App</strong> — Uber-like app that works in Morocco. Download and set up your account before you leave.
-        <a href="https://www.careem.com/" target="_blank" onclick="event.stopPropagation();" style="display:block; margin-top:4px;">→ careem.com</a>
-        <span class="checklist-label label-action">ACTION</span>
-      </div>
-    </div>
-
-    <div class="checklist-item" onclick="toggleCheck(this)">
-      <div class="checkbox"></div>
-      <div class="checklist-text">
-        <strong style="color:var(--white);">Complete Airline Pre-Check-In</strong> — Check in online 24 hours before each flight. Have your boarding passes saved to your phone.
-        <span class="checklist-label label-action">ACTION</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="insight teal-border" style="margin-top:20px;">
-    <p><strong>No Visa Required:</strong> U.S. citizens can enter Morocco visa-free for up to 90 days. Just make sure your passport is valid for at least 6 months past your departure date (Sept 2026+) and has a blank page for entry/exit stamps.</p>
-  </div>
-</div>
-
-<!-- ============ PACKING LIST ============ -->
-<div class="section" id="packing">
-  <div class="section-title">Packing List</div>
-  <div class="section-subtitle">Organized by location so you know exactly what you need for each leg of the trip. Click items to check them off as you pack.</div>
-
-  <div class="card-grid-3">
-    <!-- CASABLANCA -->
-    <div class="card">
-      <div class="hotel-city">Casablanca • Mar 18–22</div>
-      <div style="font-size:12px; color:var(--text-muted); margin-bottom:16px;">Highs 65–70°F / Lows 51–53°F • Light rain possible</div>
-
-      <div class="packing-category">
-        <div class="packing-category-title">Business / Plenary Meetings</div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Business casual outfits (multiple days)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">One business suit / dress</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">GIM shirt</div>
-        </div>
-      </div>
-
-      <div class="packing-category">
-        <div class="packing-category-title">Mosque &amp; Cultural Visits</div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Modest clothing — cover shoulders</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Longer pants/skirts to cover knees</div>
-        </div>
-      </div>
-
-      <div class="packing-category">
-        <div class="packing-category-title">Weather &amp; Comfort</div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Light layers for cooler evenings (lows ~10°C)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Rain jacket or compact umbrella</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Comfortable walking shoes</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Sunscreen &amp; sunglasses</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MARRAKECH -->
-    <div class="card">
-      <div class="hotel-city">Marrakech • Mar 22–24</div>
-      <div style="font-size:12px; color:var(--text-muted); margin-bottom:16px;">Highs 72–75°F / Lows ~48°F • Warm days, cool nights</div>
-
-      <div class="packing-category">
-        <div class="packing-category-title">Desert &amp; Outdoor Excursions</div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Desert / camel ride attire (comfortable, breathable)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Comfortable walking shoes (medina &amp; souks have uneven ground)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Sunscreen &amp; sunglasses</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Hat or cap (sun is stronger here)</div>
-        </div>
-      </div>
-
-      <div class="packing-category">
-        <div class="packing-category-title">City &amp; Dining</div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Casual going-out outfits (rooftop restaurants)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Light layers for evening (lows ~11°C)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Modest clothing for cultural sites</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PARIS -->
-    <div class="card">
-      <div class="hotel-city">Paris • Mar 24–28</div>
-      <div style="font-size:12px; color:var(--text-muted); margin-bottom:16px;">Highs ~55°F / Lows ~39°F • Much cooler, rain likely</div>
-
-      <div class="packing-category">
-        <div class="packing-category-title">Cold Weather Essentials</div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Warm jacket or coat (lows near 4°C / 39°F)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Waterproof jacket (rain very likely)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Warm layers — sweaters, long sleeves</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Scarf (warmth + style in Paris)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Compact umbrella</div>
-        </div>
-      </div>
-
-      <div class="packing-category">
-        <div class="packing-category-title">Sightseeing &amp; Day Trips</div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Comfortable waterproof walking shoes</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Nice dinner outfit (Paris restaurants)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Daypack or crossbody bag (pickpocket-proof for sightseeing)</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TRIP ESSENTIALS -->
-  <div class="card" style="margin-top:20px;">
-    <span class="label" style="display:block; margin-bottom:16px;">Trip Essentials — All Locations</span>
-    <div class="card-grid-3">
-      <div class="packing-category">
-        <div class="packing-category-title">Travel Documents</div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Passport + copies (valid 6+ months past trip)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Flight confirmations (printed + digital)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Emergency Card (save to phone)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Trip insurance documentation</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Cash — withdraw MAD at airport ATM on arrival (Morocco is cash-based)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Laundry detergent packets (for a 12-day trip)</div>
-        </div>
-      </div>
-
-      <div class="packing-category">
-        <div class="packing-category-title">Electronics &amp; Gear</div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Phone charger + adapter (Type C/E plugs — works in Morocco &amp; France)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Portable speaker (if Bus DJ — check roles)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Portable phone charger / battery pack</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Canon camera + SD memory card</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Outlet converters (Type C/E — same plug works in Morocco &amp; France)</div>
-        </div>
-      </div>
-
-      <div class="packing-category">
-        <div class="packing-category-title">GIM-Specific Items</div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">Egypt UAE travel guide (notes + health insurance card pic)</div>
-        </div>
-        <div class="checklist-item" onclick="toggleCheck(this)">
-          <div class="checkbox"></div>
-          <div class="checklist-text">IPG mugs / gift bags (just in case)</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ============ PLACES TO VISIT ============ -->
-<div class="section" id="places">
-  <div class="section-title">Places to Visit</div>
-  <div class="section-subtitle">Curated spots from Lucy Wilson's Google Maps list, coworker recommendations, and Paris ideas. <a href="https://www.google.com/maps/@32.7607215,-8.8281238,8z/data=!4m6!1m2!11m1!2sEVlezwqfl_s8K81mbfoOLg!11m2!2sEVlezwqfl_s8K81mbfoOLg!3e3" target="_blank">→ Open full Google Maps list</a></div>
-
-  <!-- Weather Cards -->
-  <span class="label" style="display:block; margin-bottom:16px; color:var(--teal);">Weather by Location</span>
-  <div class="card-grid-3" style="margin-bottom:32px;">
-    <div class="card">
-      <div class="hotel-city">Casablanca • Mar 18–22</div>
-      <div class="stat-value" style="font-size:24px; margin-bottom:8px;">Highs 65–70°F</div>
-      <div style="font-size:13px; color:var(--text-body); font-weight:300; line-height:1.8;">
-        Lows: 51–53°F<br>
-        ~8 hrs sunshine/day<br>
-        Light rain possible (6 rainy days avg in March)<br>
-        <span style="color:var(--teal); font-weight:500;">Ramadan ends ~Mar 18</span> — restaurants reopen
-      </div>
-    </div>
-    <div class="card">
-      <div class="hotel-city">Marrakech • Mar 22–24</div>
-      <div class="stat-value" style="font-size:24px; margin-bottom:8px;">Highs 72–75°F</div>
-      <div style="font-size:13px; color:var(--text-body); font-weight:300; line-height:1.8;">
-        Lows: ~48°F<br>
-        ~8 hrs sunshine/day<br>
-        Pleasant spring weather — warm days, cool nights<br>
-        Light jacket for evenings, T-shirt weather by day
-      </div>
-    </div>
-    <div class="card">
-      <div class="hotel-city">Paris • Mar 24–28</div>
-      <div class="stat-value" style="font-size:24px; margin-bottom:8px;">Highs ~55°F</div>
-      <div style="font-size:13px; color:var(--text-body); font-weight:300; line-height:1.8;">
-        Lows: ~39°F<br>
-        Rain likely (~16 rainy days in March)<br>
-        <span style="color:var(--alert); font-weight:500;">Much cooler than Morocco</span> — pack warm layers, waterproof jacket, and closed-toe shoes
-      </div>
-    </div>
-  </div>
-
-  <!-- Casablanca -->
-  <span class="label" style="display:block; margin-bottom:16px;">Casablanca — From Lucy's List</span>
-  <div class="card-grid-3" style="margin-bottom:28px;">
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.google.com/maps/place/Le+Cabestan/@33.5882,-7.6696,17z/" target="_blank" style="color:var(--white);">Le Cabestan</a></div>
-      <div style="font-size:11px; color:var(--signal-blue); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Seafood • Ocean View</div>
-      <p>Scenic restaurant for seafood with ocean views.</p>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.google.com/maps/place/Lily's+Restaurant+Casablanca/" target="_blank" style="color:var(--white);">Lily's Restaurant</a></div>
-      <div style="font-size:11px; color:var(--signal-blue); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">$$$$ • Hot Pot</div>
-      <p>TikTok rec — vibey restaurant. 4.2 stars.</p>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.google.com/maps/place/Le+Marly+Casablanca/" target="_blank" style="color:var(--white);">Le Marly</a></div>
-      <div style="font-size:11px; color:var(--signal-blue); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">$$ • Upscale District</div>
-      <p>In the upscale Anfa district. 4.0 stars.</p>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.google.com/maps/place/Habous+Olive+Market+Casablanca/" target="_blank" style="color:var(--white);">The Great Habous Olive Market</a></div>
-      <div style="font-size:11px; color:var(--signal-blue); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Market • Produce</div>
-      <p>Famous olive market. 4.4 stars.</p>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.google.com/maps/place/P%C3%A2tisserie+Bennis+Habous+Casablanca/" target="_blank" style="color:var(--white);">Pâtisserie Bennis Habous</a></div>
-      <div style="font-size:11px; color:var(--signal-blue); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">$$ • Patisserie</div>
-      <p>Famous Moroccan pastries. 4.4 stars.</p>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.google.com/maps/place/Museum+of+History+and+Civilizations+Rabat/" target="_blank" style="color:var(--white);">Museum of History &amp; Civilizations</a></div>
-      <div style="font-size:11px; color:var(--signal-blue); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Museum • Culture</div>
-      <p>Archaeological museum. 4.4 stars.</p>
-    </div>
-  </div>
-
-  <!-- Marrakech -->
-  <span class="label" style="display:block; margin-bottom:16px;">Marrakech — From Lucy's List</span>
-  <div class="card-grid-3" style="margin-bottom:12px;">
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.google.com/maps/place/OTTO+Marrakech/" target="_blank" style="color:var(--white);">Otto</a></div>
-      <div style="font-size:11px; color:var(--signal-blue); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Rooftop Restaurant</div>
-      <p>4.4 stars (2,185 reviews). Rooftop dining.</p>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.google.com/maps/place/Bacha+Coffee+Marrakech/" target="_blank" style="color:var(--white);">Bacha Coffee</a></div>
-      <div style="font-size:11px; color:var(--signal-blue); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Coffee Shop</div>
-      <p>Famous coffee spot. 4.2 stars (2,767 reviews).</p>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.jardinmajorelle.com/en/" target="_blank" style="color:var(--white);">Jardin Majorelle</a></div>
-      <div style="font-size:11px; color:var(--signal-blue); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Garden • Museum</div>
-      <p>Iconic botanical garden, YSL museum adjacent.</p>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.museeyslmarrakech.com/en/" target="_blank" style="color:var(--white);">Yves Saint Laurent Museum</a></div>
-      <div style="font-size:11px; color:var(--signal-blue); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Museum • Fashion</div>
-      <p>Dedicated to the legendary designer's work.</p>
-    </div>
-  </div>
-
-  <span class="label" style="display:block; margin:28px 0 16px; color:var(--teal);">Marrakech — Coworker Recommendations</span>
-  <div class="insight teal-border" style="margin-bottom:16px;">
-    <p><strong>From Maddie Moon — who just went to Marrakech:</strong></p>
-  </div>
-  <div class="card-grid">
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;">Comptoir Darna Marrakech</div>
-      <div style="font-size:11px; color:var(--teal); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Top Pick • Dining &amp; Entertainment</div>
-      <p>"The maple &amp; ash of Marrakech — great signature lamb leg, belly dancing and fire shows."</p>
-      <a href="https://www.comptoirmarrakech.com/" target="_blank" style="display:inline-block; margin-top:8px; font-size:13px; font-weight:500;">→ comptoirmarrakech.com</a>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;">Nomad Marrakech</div>
-      <div style="font-size:11px; color:var(--teal); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Top Pick • Rooftop</div>
-      <p>"Very good food spot on a rooftop in the middle of the market — you'll walk a bit to get there (which is fun)."</p>
-      <a href="https://nomadmarrakech.com/" target="_blank" style="display:inline-block; margin-top:8px; font-size:13px; font-weight:500;">→ nomadmarrakech.com</a>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;">Les Bains de Tarabel</div>
-      <div style="font-size:11px; color:var(--teal); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Top Pick • Hammam / Spa</div>
-      <p>"Amazing hammam/spa — mimics traditional process but high-end. Highly recommended."</p>
-      <a href="https://lesbainsdetarabel.com/en/" target="_blank" style="display:inline-block; margin-top:8px; font-size:13px; font-weight:500;">→ lesbainsdetarabel.com</a>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;">Rooftop Dar Dar</div>
-      <div style="font-size:11px; color:var(--teal); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Top Pick • Bar / Restaurant</div>
-      <p>"Very good and cool rooftop bar/restaurant."</p>
-      <a href="https://www.rooftopdardar.com/en" target="_blank" style="display:inline-block; margin-top:8px; font-size:13px; font-weight:500;">→ rooftopdardar.com</a>
-    </div>
-  </div>
-
-  <span class="label" style="display:block; margin:28px 0 16px; color:var(--teal);">Morocco — Andrew's Recommendations</span>
-  <div class="insight teal-border" style="margin-bottom:16px;">
-    <p><strong>From Andrew Pallotta Jr — adventures beyond the city:</strong></p>
-  </div>
-  <div class="card-grid">
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.google.com/maps/place/A%C3%AFt+Benhaddou/" target="_blank" style="color:var(--white);">Ait Ben Haddou</a></div>
-      <div style="font-size:11px; color:var(--teal); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Day Trip • UNESCO Site</div>
-      <p>Ancient fortified village (ksar) and UNESCO World Heritage Site. Famous filming location for Gladiator, Game of Thrones, and more. ~3.5 hrs from Marrakech.</p>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.google.com/maps/place/Sahara+Desert+Morocco/" target="_blank" style="color:var(--white);">Camel Trek &amp; Sahara Overnight</a></div>
-      <div style="font-size:11px; color:var(--teal); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Adventure • Desert</div>
-      <p>Overnight stay in the Sahara Desert with Nomad Camps. Camel trek into the dunes, campfire dinner, and sleep under the stars. A once-in-a-lifetime experience.</p>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;"><a href="https://www.google.com/maps/place/High+Atlas/" target="_blank" style="color:var(--white);">High Atlas Mountains</a></div>
-      <div style="font-size:11px; color:var(--teal); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Day Trip • Nature</div>
-      <p>Stunning mountain range just outside Marrakech. Great for hiking, visiting Berber villages, and dramatic scenery. Easily accessible as a day trip.</p>
-    </div>
-    <div class="tip-card">
-      <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;">Rent a Riad + Hit the Market</div>
-      <div style="font-size:11px; color:var(--teal); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Must-Do • Marrakech</div>
-      <p>Rent a traditional riad with friends for the authentic Marrakech experience. Explore the medina markets (souks) — haggling is part of the fun.</p>
-    </div>
-  </div>
-
-  <!-- Paris Ideas -->
-  <span class="label" style="display:block; margin:28px 0 16px;">Paris — Sightseeing Ideas (Mar 25 &amp; 27)</span>
-  <div class="card-grid">
-    <div class="card">
-      <div class="card-title">Must-See Sights</div>
-      <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-        <div style="margin-bottom:4px;"><span style="color:var(--teal);">◆</span> <a href="https://www.toureiffel.paris/en" target="_blank">Eiffel Tower</a> (book tickets in advance)</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--teal);">◆</span> <a href="https://www.louvre.fr/en" target="_blank">Louvre Museum</a> (allow 3-4 hrs minimum)</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--teal);">◆</span> <a href="https://www.notredamedeparis.fr/en/" target="_blank">Notre-Dame Cathedral</a> (under restoration — check status)</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--teal);">◆</span> <a href="https://www.paris-arc-de-triomphe.fr/en" target="_blank">Arc de Triomphe</a> + Champs-Élysées walk</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--teal);">◆</span> <a href="https://www.sacre-coeur-montmartre.com/english/" target="_blank">Sacré-Cœur</a> + Montmartre neighborhood</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--teal);">◆</span> <a href="https://www.musee-orsay.fr/en" target="_blank">Musée d'Orsay</a> (Impressionist art)</div>
-        <div><span style="color:var(--teal);">◆</span> Walk along the Seine / Pont Alexandre III</div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">Food &amp; French Experiences</div>
-      <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-        <div style="margin-bottom:4px;"><span style="color:var(--signal-blue);">◆</span> Fresh croissants + café crème at a corner bakery</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--signal-blue);">◆</span> Classic bistro lunch (steak frites, croque monsieur)</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--signal-blue);">◆</span> Le Marais neighborhood — trendy food scene</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--signal-blue);">◆</span> Saint-Germain-des-Prés — classic Left Bank cafés</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--signal-blue);">◆</span> Wine bar evening (natural wine scene is great)</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--signal-blue);">◆</span> Luxembourg Gardens — stroll after lunch</div>
-        <div><span style="color:var(--signal-blue);">◆</span> French cheese + charcuterie at a market</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="insight" style="margin-top:12px;">
-    <p><strong>Bordeaux Day Trip (Thu Mar 26):</strong> TGV high-speed train from Paris Montparnasse to Bordeaux Saint-Jean (~2h 15m). Book tickets on <a href="https://www.sncf-connect.com/en-en/" target="_blank">SNCF Connect</a>. The Saint-Émilion wine region is a ~45 min train/bus from Bordeaux for vineyard tours. The city center is a UNESCO World Heritage site worth exploring.</p>
-  </div>
-
-  <span class="label" style="display:block; margin:28px 0 16px; color:var(--teal);">Alternative Day Trip — Andrew's Pick</span>
-  <div class="tip-card" style="max-width:600px;">
-    <div style="font-size:16px; color:var(--white); font-weight:500; font-family:'Instrument Serif',serif; margin-bottom:4px;">Cassis — South of France</div>
-    <div style="font-size:11px; color:var(--teal); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">Andrew's Favorite • Coastal Town</div>
-    <p>"My favorite town in the south of France." Rent a boat and explore the Calanques National Park — stunning limestone cliffs and turquoise water. TGV from Paris to Marseille (~3h 15m), then 30 min to Cassis.</p>
-    <a href="https://guide.michelin.com/us/en/hotels-stays/cassis/les-roches-blanches-9068" target="_blank" style="display:inline-block; margin-top:8px; font-size:13px; font-weight:500;">→ Les Roches Blanches (Michelin Guide)</a>
-  </div>
-</div>
-
-<!-- ============ DOCUMENTS & LINKS ============ -->
-<div class="section" id="docs">
-  <div class="section-title">Documents &amp; Links</div>
-  <div class="section-subtitle">All trip documents, attachments, and important links in one place. PDFs open directly — save them to your phone for offline access.</div>
-
-  <span class="label" style="display:block; margin-bottom:16px;">Trip Documents</span>
-
-  <a class="doc-link" href="https://docs.google.com/spreadsheets/d/1CB_hR7O9C70vENhYOLKGt4rquSaIvUKMQIi6vX5Ygw8/edit?usp=sharing" target="_blank">
-    <div class="doc-icon">📊</div>
-    <div class="doc-info">
-      <div class="doc-title">GIM Morocco Google Sheet — Roster, Itinerary &amp; Roles</div>
-      <div class="doc-meta">Google Sheets • Enter passport info + flight details on Roster tab</div>
-    </div>
-  </a>
-
-  <a class="doc-link" href="GIM-Morocco-Travel-Guide.pdf" target="_blank">
-    <div class="doc-icon">📘</div>
-    <div class="doc-info">
-      <div class="doc-title">GIM Morocco Travel Guide</div>
-      <div class="doc-meta">PDF • 752 KB • Country background, cultural guidance, practical tips</div>
-    </div>
-  </a>
-
-  <a class="doc-link" href="Emergency-Card-GIM-Morocco-2026.pdf" target="_blank">
-    <div class="doc-icon">🚨</div>
-    <div class="doc-info">
-      <div class="doc-title">Emergency Card — GIM Morocco 2026</div>
-      <div class="doc-meta">PDF • Save to your phone! • Emergency contacts and procedures</div>
-    </div>
-  </a>
-
-  <a class="doc-link" href="Morocco-Meet-GIM-BRG-2026.pdf" target="_blank">
-    <div class="doc-icon">👥</div>
-    <div class="doc-info">
-      <div class="doc-title">Morocco Meet — GIM BRG 2026</div>
-      <div class="doc-meta">PDF • Meet the class document</div>
-    </div>
-  </a>
-
-  <div style="margin-top:28px;">
-    <span class="label" style="display:block; margin-bottom:16px;">Important Links</span>
-
-    <a class="doc-link" href="https://step.state.gov/" target="_blank">
-      <div class="doc-icon">🏛️</div>
-      <div class="doc-info">
-        <div class="doc-title">STEP Program — Smart Traveler Enrollment</div>
-        <div class="doc-meta">step.state.gov • Re-enroll with new cities/dates</div>
-      </div>
-    </a>
-  </div>
-</div>
-
-<!-- ============ CULTURE PREP ============ -->
-<div class="section" id="culture">
-  <div class="section-title">Culture Prep</div>
-  <div class="section-subtitle">Key cultural knowledge for Morocco — from the GIM Travel Guide. Read this before you go and reference it on the plane.</div>
-
-  <div class="insight teal-border" style="margin-bottom:24px;">
-    <p><strong>Morocco at a Glance:</strong> Constitutional monarchy led by King Mohammed VI. GDP growing 3.7–4.9%, driven by automotive, aerospace, and renewable energy. Hosting the 2030 FIFA World Cup. A rapidly modernizing country with deep cultural traditions.</p>
-  </div>
-
-  <div class="card-grid">
-    <!-- Language -->
-    <div class="card">
-      <span class="label" style="display:block; margin-bottom:12px; color:var(--teal);">Language</span>
-      <div class="card-title">What You'll Hear</div>
-      <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-        <strong style="color:var(--white);">Moroccan Arabic (Darija)</strong> is the most widely spoken language. <strong style="color:var(--white);">French</strong> is the primary business language and widely spoken in cities. Standard Arabic and Amazigh (Berber) are also official.<br><br>
-        <span style="color:var(--teal); font-weight:500;">Key Phrases:</span><br>
-        <span style="color:var(--white);">Salaam Alaikum</span> — Hello (Peace be upon you)<br>
-        <span style="color:var(--white);">Shukran</span> — Thank you<br>
-        <span style="color:var(--white);">La</span> — No &nbsp;/&nbsp; <span style="color:var(--white);">Na'am</span> — Yes<br>
-        <span style="color:var(--white);">Bslama</span> — Goodbye<br>
-        <span style="color:var(--white);">Bezzaf</span> — Too expensive (useful in souks!)
-      </div>
-    </div>
-
-    <!-- Currency -->
-    <div class="card">
-      <span class="label" style="display:block; margin-bottom:12px; color:var(--signal-blue);">Currency &amp; Money</span>
-      <div class="card-title">Moroccan Dirham (MAD)</div>
-      <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-        <strong style="color:var(--white);">1 USD ≈ 9.28 MAD</strong> (as of March 2026)<br><br>
-        <span style="color:var(--alert); font-weight:500;">Morocco is a cash-based society.</span> Many shops, taxis, and markets accept cash only. ATMs are widely available — withdraw MAD on arrival at the airport.<br><br>
-        Credit cards are accepted at hotels, upscale restaurants, and modern stores. Visa and Mastercard work best. <strong style="color:var(--white);">Tip 10–15%</strong> at restaurants. Small tips (5–10 MAD) expected for services.
-      </div>
-    </div>
-  </div>
-
-  <div class="card-grid" style="margin-top:20px;">
-    <!-- Dress & Etiquette -->
-    <div class="card">
-      <span class="label" style="display:block; margin-bottom:12px; color:var(--teal);">Dress Code &amp; Etiquette</span>
-      <div class="card-title">How to Show Respect</div>
-      <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-        <div style="margin-bottom:8px;"><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Dress modestly</strong> — cover shoulders and knees, especially at religious sites and in the medina. Casablanca is more cosmopolitan, but conservative dress is always appreciated.</div>
-        <div style="margin-bottom:8px;"><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Remove shoes</strong> when entering homes, riads, or when indicated at mosques.</div>
-        <div style="margin-bottom:8px;"><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Use your right hand</strong> for greetings, eating, and exchanging items. The left hand is considered unclean.</div>
-        <div style="margin-bottom:8px;"><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Greetings matter</strong> — handshakes are common. Between close contacts, expect cheek kisses (usually two). Always greet before jumping into business.</div>
-        <div><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Ask before photographing</strong> people, especially in markets and rural areas.</div>
-      </div>
-    </div>
-
-    <!-- Religion -->
-    <div class="card">
-      <span class="label" style="display:block; margin-bottom:12px; color:var(--signal-blue);">Religion &amp; Mosques</span>
-      <div class="card-title">Islam in Daily Life</div>
-      <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-        Morocco is a <strong style="color:var(--white);">Muslim-majority country</strong> (99%+). The call to prayer (adhan) sounds five times daily — this is normal and part of the culture.<br><br>
-        <span style="color:var(--alert); font-weight:500;">Most mosques are closed to non-Muslims.</span> The major exception is the <strong style="color:var(--white);">Hassan II Mosque in Casablanca</strong>, which offers guided tours and is on our itinerary.<br><br>
-        <strong style="color:var(--white);">Ramadan note:</strong> Ramadan 2026 ends around March 18. You may still see some observances early in the trip. Be respectful of those fasting — avoid eating/drinking conspicuously in public during daylight hours in the first day or two.
-      </div>
-    </div>
-  </div>
-
-  <div class="card-grid" style="margin-top:20px;">
-    <!-- Food & Drink -->
-    <div class="card">
-      <span class="label" style="display:block; margin-bottom:12px; color:var(--teal);">Food &amp; Drink</span>
-      <div class="card-title">What to Eat (and Not to Drink)</div>
-      <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-        <div class="insight alert-border" style="margin-bottom:16px;">
-          <p><strong>DO NOT drink tap water.</strong> Stick to bottled water. Use bottled water for brushing teeth too. Avoid ice in drinks unless at a high-end establishment.</p>
-        </div>
-        <span style="color:var(--teal); font-weight:500;">Must-Try Dishes:</span><br>
-        <div style="margin-bottom:4px;"><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Tagine</strong> — slow-cooked stew in a cone-shaped pot (lamb, chicken, or vegetable)</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Couscous</strong> — traditionally served on Fridays (sacred day)</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Tanjia</strong> — Marrakech specialty, slow-cooked meat</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Mint Tea</strong> — "Moroccan whiskey" — a social ritual, always accept when offered</div>
-        <div><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Pastilla</strong> — sweet and savory pastry with pigeon or chicken</div>
-      </div>
-    </div>
-
-    <!-- Safety -->
-    <div class="card">
-      <span class="label" style="display:block; margin-bottom:12px; color:var(--alert);">Safety &amp; Health</span>
-      <div class="card-title">Stay Smart</div>
-      <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-        <strong style="color:var(--white);">Travel Advisory:</strong> Level 2 — Exercise Increased Caution (standard for most countries).<br><br>
-        <div style="margin-bottom:8px;"><span style="color:var(--alert);">◆</span> <strong style="color:var(--white);">Watch for petty theft</strong> in crowded areas (medinas, markets, transport hubs). Keep valuables in front pockets or a crossbody bag.</div>
-        <div style="margin-bottom:8px;"><span style="color:var(--alert);">◆</span> <strong style="color:var(--white);">Be firm with touts and hustlers</strong> — a polite but firm "La, shukran" (No, thank you) works.</div>
-        <div style="margin-bottom:8px;"><span style="color:var(--alert);">◆</span> <strong style="color:var(--white);">No mandatory vaccinations</strong>, but CDC recommends being up-to-date on MMR, Tdap, Hep A, and Typhoid.</div>
-        <div style="margin-bottom:8px;"><span style="color:var(--alert);">◆</span> <strong style="color:var(--white);">Emergency:</strong> Dial <strong style="color:var(--teal);">19</strong> (police) or <strong style="color:var(--teal);">112</strong> from a cell phone.</div>
-        <div><span style="color:var(--alert);">◆</span> <strong style="color:var(--white);">Avoid walking alone at night</strong> in unfamiliar areas, especially in older medina neighborhoods.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card-grid" style="margin-top:20px;">
-    <!-- Transportation -->
-    <div class="card">
-      <span class="label" style="display:block; margin-bottom:12px; color:var(--signal-blue);">Getting Around</span>
-      <div class="card-title">Transportation</div>
-      <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-        <span style="color:var(--signal-blue); font-weight:500;">Rideshare Apps (recommended):</span><br>
-        <div style="margin-bottom:4px;"><span style="color:var(--signal-blue);">◆</span> <strong style="color:var(--white);">InDrive</strong> — most popular, negotiate your price</div>
-        <div style="margin-bottom:4px;"><span style="color:var(--signal-blue);">◆</span> <strong style="color:var(--white);">Careem</strong> — Uber-like, reliable in cities</div>
-        <div style="margin-bottom:12px;"><span style="color:var(--signal-blue);">◆</span> <strong style="color:var(--white);">WinkTaxi</strong> — alternative option</div>
-        <span style="color:var(--signal-blue); font-weight:500;">Petits Taxis:</span><br>
-        Small, color-coded taxis for getting around cities. <strong style="color:var(--white);">Red in Casablanca, beige in Marrakech.</strong> Insist on the meter or agree on price before getting in. Short rides typically cost 10–20 MAD.
-      </div>
-    </div>
-
-    <!-- Business Norms -->
-    <div class="card">
-      <span class="label" style="display:block; margin-bottom:12px; color:var(--teal);">Business &amp; Social Norms</span>
-      <div class="card-title">For GIM Meetings</div>
-      <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-        <div style="margin-bottom:8px;"><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Relationships first.</strong> Moroccans value personal connections before getting down to business. Expect small talk, tea, and hospitality before meetings begin.</div>
-        <div style="margin-bottom:8px;"><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Meetings may start late.</strong> Punctuality expectations are more relaxed than in the U.S.</div>
-        <div style="margin-bottom:8px;"><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Business casual / suit</strong> for plenary meetings (check Google Sheet for daily dress code).</div>
-        <div><span style="color:var(--teal);">◆</span> <strong style="color:var(--white);">Sensitive topics to avoid:</strong> criticism of the King or monarchy, Western Sahara politics, and comparing Morocco unfavorably to other countries.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Practical Quick Reference -->
-  <div class="card" style="margin-top:20px;">
-    <span class="label" style="display:block; margin-bottom:16px;">Quick Reference</span>
-    <div class="card-grid-3">
-      <div>
-        <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-          <span style="color:var(--signal-blue); font-weight:600; font-size:11px; letter-spacing:1.5px; text-transform:uppercase;">Electricity</span><br>
-          Type C &amp; E plugs (same as France). 220V. Bring a <strong style="color:var(--white);">European adapter</strong> — one plug works for Morocco AND Paris.
-        </div>
-      </div>
-      <div>
-        <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-          <span style="color:var(--signal-blue); font-weight:600; font-size:11px; letter-spacing:1.5px; text-transform:uppercase;">Time Zone</span><br>
-          Morocco: <strong style="color:var(--white);">UTC+1</strong> (6 hrs ahead of Chicago). France: <strong style="color:var(--white);">UTC+1</strong> (same as Morocco in March).
-        </div>
-      </div>
-      <div>
-        <div style="font-size:14px; color:var(--text-body); font-weight:300; line-height:2;">
-          <span style="color:var(--signal-blue); font-weight:600; font-size:11px; letter-spacing:1.5px; text-transform:uppercase;">Haggling</span><br>
-          <strong style="color:var(--white);">Expected in souks and markets.</strong> Start at 50% of asking price and negotiate. Fixed prices in modern stores and malls.
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="insight" style="margin-top:20px;">
-    <p><strong>From Christine:</strong> "Please still bring your Egypt UAE travel guide I previously handed out. You can use it to take notes in and it has a pic of the health insurance card included!"</p>
-  </div>
-
-  <div class="insight alert-border">
-    <p><strong>TSA Advisory:</strong> Security lines are long right now. There may be delays — plan accordingly and arrive early for your flights.</p>
-  </div>
-</div>
-
-<!-- ============ CONTACTS ============ -->
-<div class="section" id="contacts">
-  <div class="section-title">Key Contacts</div>
-  <div class="section-subtitle">Trip organizers and Kellogg Global Experience team.</div>
-
-  <div class="card-grid-3">
-    <div class="card">
-      <span class="label" style="display:block; margin-bottom:12px;">Main Point of Contact</span>
-      <div class="hotel-name" style="font-size:20px;">Christine Post</div>
-      <div style="font-size:13px; color:var(--text-body); font-weight:300; line-height:1.8; margin-top:8px;">
-        Associate Director, Student Experience &amp; Communications<br>
-        Executive MBA<br>
-        Kellogg School of Management
-      </div>
-    </div>
-    <div class="card">
-      <span class="label" style="display:block; margin-bottom:12px;">GLEX</span>
-      <div class="hotel-name" style="font-size:20px;">Debbie Kraus</div>
-      <div style="font-size:13px; color:var(--text-body); font-weight:300; line-height:1.8; margin-top:8px;">
-        Senior Director, Global Experience<br>
-        Kellogg School of Management
-      </div>
-      <div style="border-top:1px solid var(--border); margin-top:16px; padding-top:16px;">
-        <div class="hotel-name" style="font-size:20px;">Annie Reagan</div>
-        <div style="font-size:13px; color:var(--text-body); font-weight:300; line-height:1.8; margin-top:8px;">
-          Associate Director, Global Academic Experience<br>
-          Kellogg School of Management
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <span class="label" style="display:block; margin-bottom:12px;">Faculty / Trip Leader</span>
-      <div class="hotel-name" style="font-size:20px;">Daniel Lansberg-Rodriguez</div>
-      <div style="font-size:13px; color:var(--text-body); font-weight:300; line-height:1.8; margin-top:8px;">
-        DLR — Faculty trip leader<br>
-        Leading plenary meetings and academic programming
-      </div>
-    </div>
-  </div>
-
-  <div class="insight" style="margin-top:20px;">
-    <p><strong>WhatsApp Group:</strong> A new WhatsApp group is being created for the Morocco trip. Be on the lookout for the invitation.</p>
-  </div>
-
-  <div class="insight teal-border">
-    <p><strong>General Inquiries:</strong> Reach out to <strong>@Kellogg Global Experience</strong> for any questions the team can help with.</p>
-  </div>
-</div>
-
-<div style="text-align:center; padding:40px 32px; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border);">
-  <div style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:8px; color:var(--signal-blue);">GIM Morocco 2026</div>
-  Kellogg School of Management — Evening &amp; Weekend MBA<br>
-  Last updated: March 14, 2026
+  <button class="lightbox-btn lightbox-nav next" id="lightboxNext" aria-label="Next photo">
+    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+  <div class="swipe-hint">Swipe to navigate</div>
 </div>
 
 <script>
-  function showSection(id) {
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    event.target.classList.add('active');
-    window.scrollTo(0, 0);
-  }
+// ============================================================
+// PHOTO CONFIGURATION
+// ============================================================
+// Each photo needs a Google Drive file ID. To get the ID:
+// 1. Right-click the file in Google Drive → "Get Link"
+// 2. The ID is the long string in the URL between /d/ and /view
+//
+// Image URL pattern:
+//   Thumbnail: https://drive.google.com/thumbnail?id=FILE_ID&sz=w800
+//   Full size: https://drive.google.com/thumbnail?id=FILE_ID&sz=w1920
+//   Download:  https://drive.google.com/uc?export=download&id=FILE_ID
+//
+// FOLDER must be shared as "Anyone with the link" for images to load.
+// ============================================================
 
-  function toggleCheck(item) {
-    const checkbox = item.querySelector('.checkbox');
-    const text = item.querySelector('.checklist-text');
-    checkbox.classList.toggle('checked');
-    text.classList.toggle('checked-text');
-    saveState();
-  }
+const DRIVE_FOLDER_ID = '1EdQXnTxaTJ7bpp0RA87h7_vic4xj9smc';
 
-  // Persist checkbox state in memory (resets on page reload)
-  function saveState() {
-    const states = [];
-    document.querySelectorAll('.checkbox').forEach((cb, i) => {
-      states.push(cb.classList.contains('checked'));
+// Helper to construct Drive image URLs
+// Uses lh3.googleusercontent.com direct format (no redirect, faster loading)
+function driveThumb(id, width = 800) {
+  return `https://lh3.googleusercontent.com/d/${id}=w${width}`;
+}
+function driveDownload(id) {
+  return `https://drive.google.com/uc?export=download&id=${id}`;
+}
+function driveView(id) {
+  return `https://drive.google.com/file/d/${id}/view`;
+}
+
+// ============================================================
+// GALLERY DATA - Organized by day/chapter
+// ============================================================
+// Add file IDs here as photos are taken throughout the trip.
+// Each photo: { id: 'DRIVE_FILE_ID', caption: '...', location: '...' }
+// First photo in each day with wide:true gets the featured wide layout.
+// ============================================================
+
+const GALLERY_DATA = {
+  highlights: {
+    label: 'Highlight Reel',
+    title: 'Best of the Trip',
+    desc: 'The moments that stopped us in our tracks — from the Atlantic coast of Casablanca to the capital city of Rabat and the warmth of Dar El Kaid.',
+    carousel: [
+      { id: '1MKLp5BLmo3g8vBalkTxHWVN1Vom0ycoR' },
+      { id: '1I9VQWUqJ6KyPPtJgvCRj9YiaiTD63-nY' },
+      { id: '1geAyyaXvowAaHd8_8kl3y5Xn2AgCB9ah' },
+      { id: '1ksbn03VTDmvmy-1C-nVWk2dFPqLZ1dSF' },
+      { id: '19aG0DOGaQfVRSCwkUx91IoZTNq1MBMlM' },
+    ],
+    videos: []
+  },
+  days: [
+    {
+      id: 'day1',
+      number: '01',
+      title: 'Casablanca',
+      date: 'Tuesday–Wednesday, March 17–18',
+      desc: 'Arrival in Morocco\'s economic capital. Golden hour on the hotel rooftop, corporate visits, dinner at Dar Dada, and the Welcome Dinner at Dar El Kaid — our first real taste of Moroccan hospitality.',
+      photos: [
+        // GOLDEN HOUR — Hotel rooftop
+        { id: '1qFOdC8YQEaWM0-54wtKk7nveIgAGQzYg', wide: true },
+        { id: '11oSgtHXZotqigfLjmSxWyXvJYJ977ZYF' },
+        // CORPORATE VISIT
+        { id: '1UztJqClxiFnw6y-PlCqLbd3CnAK4O1fQ', wide: true },
+        { id: '1YK3vl5_AYF44B601a1vUCr-C6vP13kWE' },
+        { id: '1m_7y662YKprGQTw-alC2rY6r3w6Cqv4z' },
+        // VIDEOS: Dar Dada
+        { id: '1kOo4s9NDzsQqUkr7baL-YVlClxN52E96', type: 'video' },
+        { id: '1ewS_z6NXF9CH8mhW9jiZQKw0wHPdeXT7', type: 'video' },
+        // DAR DADA — Dinner photos
+        { id: '1dfXwJVa0ZJ895UooYTiQGJdwCbvpi6JG', wide: true },
+        { id: '1Dv6hCitw0haT-_1YlLIJBBFxz5SxMWav' },
+        { id: '1mq0M7B1Let8TSa-iw9R2Tar405EiclXz' },
+        { id: '1L9omlIpUC-oB1fZrrG9zn4s9uXW58Lwl' },
+        { id: '14QbNwx9p4yaObIY1-LeXDfrmlB8gqTih', type: 'video' },
+        // EVENING — Moroccan interior / dinner
+        { id: '1_e2tK97GN3NKtG439wiTanz6RwwA7HjG' },
+        { id: '1TrovV_UHzkW5OYbiSBTN2zYN13iJrpQW' },
+        { id: '1MCPH4Crg8K3URRhrxH57F1xXKimdCNF1' },
+        { id: '13MN4jxmvaWWSl0CIwhqFRJVdtuwQyPcz' },
+        { id: '1nRSnLsbzoHP88PRpAEA2tz5Q692Tqjvv' },
+        // DAR EL KAID
+        { id: '1geAyyaXvowAaHd8_8kl3y5Xn2AgCB9ah', wide: true },
+        { id: '1nj-7NEX8ey6A86ArHAFkj0aL72gtQli_' },
+        { id: '19aG0DOGaQfVRSCwkUx91IoZTNq1MBMlM' },
+        { id: '1hYpzSevB1ZcA9Nh3FoAB8riZ7DUdOQNp', type: 'video' },
+        { id: '1TTCFXCWAtCf66GAVCG89qsaqPRjSHcBG' },
+        { id: '1eAwz_lc7JfGLbg2qIqSwAWXLCV8-Z-C1', type: 'video' },
+      ]
+    },
+    {
+      id: 'day2',
+      number: '02',
+      title: 'Rabat',
+      date: 'Thursday, March 19',
+      desc: 'Day trip to Morocco\'s capital city. UM6P campus visit and meetings at the Ministry of Industry and Trade with Minister Mezzour.',
+      photos: [
+        // UM6P CAMPUS
+        { id: '1G3WwakbvwOTmcQn7p2XmXJzcaMIY7UZB', wide: true },
+        { id: '13-bHO0jpPbIGt67lDcGg6FSJIfAv4VUZ' },
+        { id: '10rNvREtnmW-9IifArmzXRXOmq3ZyIQSB' },
+        { id: '1fdX9_sE-7A8-sWz3syon7nktC74kCcvO' },
+        { id: '144ZIpQDvquc7h5auP_Vjm_bG3WmMyYZM' },
+        // VIDEO: Campus walkabout
+        { id: '1g7obsRNZyIJqwHnygJhTwrbMPZ-KvKbs', type: 'video' },
+        // MINISTRY / GOVERNMENT VISITS
+        { id: '1W0caRU0Gtg4l8KTGKkzchdkD7jnp8Sko', wide: true },
+        { id: '1gLuXdJHlYJo0FhZ3uB9fYqqxfu_p_lZr' },
+        { id: '1aJt-0vRTIQ8Hu2mgeBarMiJ-wx_uUmc9' },
+        { id: '1RAthcwepI6NMpfQTZS49oqhggKKHhfvS' },
+        // NEW — Official meetings with Moroccan flags
+        { id: '12xRx_-4jCpTfCasjWo_jVtJonPtNhaYb', wide: true },
+        { id: '1QrIbFpGvjghWIkygQ8gEfQbwfw79Lhc2' },
+        { id: '1mbGVyfuAWEKD2A_Q1Bt8E0XFBFoIhuPX' },
+        { id: '1C1pqh6ZVJSMIJGrp-tSSAHxtOgQg5efr', wide: true },
+        { id: '147P-sIZ04MznFLrGlfhrJoU8cBdatSwt' },
+        { id: '1HexrQtyjTGrvrfupfbjbeexl_jDxD_0N' },
+        { id: '1RT6CXU4vaDO0wNVppD2BG1zcfrsfZnDe' },
+        { id: '1QSRBEX7j1NV0K3JAkccF1PsFNk5CiPkK', wide: true },
+        { id: '1lqOPQvq71iTTp80X3q7fOsiwtQtkAeYS' },
+        { id: '1iAYggzDPpGT0rJTJLDuHkKisH-S038-g' },
+      ]
+    },
+    {
+      id: 'day3',
+      number: '03',
+      title: 'Benguerir',
+      date: 'Friday, March 20',
+      desc: 'OCP mine visit and campus tour in Benguerir — exploring Morocco\'s phosphate industry.',
+      photos: [
+        // OCP MINE VISIT — Hi-vis / rainbow day
+        { id: '13oG1eIrm3Q7tc54oLCVvCN0Iytn81GIO', wide: true },
+        { id: '1bQ45y139ADABP6rtfsMp-_HSn0eD_CMH' },
+        { id: '1aPOVHbHOQpRzfk_0oJ4xikIIpE_GhVP6' },
+        { id: '1Mmenx3AQqSfGHmchdhGD26v8x5SOhX9i' },
+        { id: '19pjz1aRixbimmmsY3BDzDidhFHiPfzrF' },
+        { id: '1VcX7dDl1u74xZZZXiLg1SOEDrL8LABHN', wide: true },
+        // Campus group photos
+        { id: '1DR7m6Wk1ptf5m2eTgXgNAS50qvHg636q', wide: true },
+        { id: '10cu9wiC4QfGvfAlPOHquU4pnbiG5nosO' },
+        { id: '1gPDUOQtHe9KqNCdAa1dY3_G8cWp6GNDy' },
+      ]
+    },
+    {
+      id: 'day4',
+      number: '04',
+      title: 'Marrakesh',
+      date: 'Saturday–Sunday, March 21–22',
+      desc: '',
+      photos: [],
+      upcoming: true
+    },
+    {
+      id: 'day5',
+      number: '05',
+      title: 'Agafay Desert',
+      date: 'Monday, March 23',
+      desc: '',
+      photos: [],
+      upcoming: true
+    },
+    {
+      id: 'day6',
+      number: '06',
+      title: 'Return to Casablanca',
+      date: 'Tuesday, March 24',
+      desc: '',
+      photos: [],
+      upcoming: true
+    },
+  ]
+};
+
+// ============================================================
+// RENDERING ENGINE
+// ============================================================
+
+function renderGallery() {
+  const content = document.getElementById('gallery-content');
+  let html = '';
+  let allPhotos = []; // flat list for lightbox (photos only, not videos)
+
+  // Count items
+  let totalPhotos = 0;
+  GALLERY_DATA.days.forEach(day => {
+    day.photos.forEach(p => { if (p.type !== 'video') totalPhotos++; });
+  });
+  totalPhotos += GALLERY_DATA.highlights.carousel.length;
+  document.getElementById('statPhotos').textContent = totalPhotos;
+
+  // --- Highlights Section ---
+  const hl = GALLERY_DATA.highlights;
+  html += `<section class="highlight-section" id="highlights">
+    <div class="section-inner">
+      <div class="section-label">${hl.label}</div>
+      <div class="section-title">${hl.title}</div>
+      <div class="section-desc">${hl.desc}</div>`;
+
+  // Carousel
+  if (hl.carousel && hl.carousel.length > 0) {
+    html += `<div class="highlight-carousel" id="highlightCarousel">`;
+    hl.carousel.forEach((photo, i) => {
+      html += `<div class="carousel-slide ${i === 0 ? 'active' : ''}" data-index="${i}">
+        <img src="${driveThumb(photo.id, 1920)}" alt="${photo.caption || ''}">
+        <div class="carousel-overlay"></div>
+      </div>`;
     });
-    try { localStorage.setItem('morocco-trip-checklist', JSON.stringify(states)); } catch(e) {}
+    html += `</div>`;
+    // Dots
+    html += `<div class="carousel-dots">`;
+    hl.carousel.forEach((_, i) => {
+      html += `<button class="carousel-dot ${i === 0 ? 'active' : ''}" data-slide="${i}" onclick="goToSlide(${i})" aria-label="Slide ${i+1}"></button>`;
+    });
+    html += `</div>`;
   }
 
-  function loadState() {
-    try {
-      const states = JSON.parse(localStorage.getItem('morocco-trip-checklist'));
-      if (states) {
-        document.querySelectorAll('.checkbox').forEach((cb, i) => {
-          if (states[i]) {
-            cb.classList.add('checked');
-            cb.closest('.checklist-item')?.querySelector('.checklist-text')?.classList.add('checked-text');
-          }
-        });
+  // Video reel below carousel
+  if (hl.videos && hl.videos.length > 0) {
+    html += `<div style="margin-top:40px"><div class="section-label" style="color:var(--terracotta-light)">Video Highlights</div></div>`;
+    html += `<div class="video-reel">`;
+    hl.videos.forEach(video => {
+      html += renderVideoCard(video);
+    });
+    html += `</div>`;
+  }
+
+  html += `</div></section>`;
+
+  // --- Day Sections with Apple-style dividers ---
+  let renderedDayIndex = 0;
+  GALLERY_DATA.days.forEach((day, di) => {
+    if (day.upcoming) return;
+
+    // Apple-style section divider before each day
+    html += `<div class="section-divider" id="divider-${day.id}">
+      <div class="divider-number">${day.number}</div>
+      <div class="divider-label">Day ${parseInt(day.number)}</div>
+      <div class="divider-city">${day.title}</div>
+      <div class="divider-date">${day.date}</div>
+      <div class="divider-line"></div>
+    </div>`;
+
+    const bgClass = renderedDayIndex % 2 === 0 ? 'bg-light' : 'bg-sand';
+    renderedDayIndex++;
+    html += `<section class="day-section ${bgClass}" id="${day.id}">
+      <div class="section-inner">
+        <div class="day-desc scroll-fade-up">${day.desc}</div>`;
+
+    if (day.photos.length > 0) {
+      html += `<div class="photo-grid">`;
+      day.photos.forEach((item) => {
+        if (item.type === 'video') {
+          html += renderVideoCard(item, item.wide);
+        } else {
+          const idx = allPhotos.length;
+          allPhotos.push(item);
+          html += renderPhotoCard(item, idx, item.wide ? 'wide' : '');
+        }
+      });
+      html += `</div>`;
+    } else {
+      html += `<div class="empty-day">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <p>Photos from ${day.title} coming soon</p>
+      </div>`;
+    }
+
+    html += `</div></section>`;
+  });
+
+  content.innerHTML = html;
+  window._allPhotos = allPhotos;
+  renderNav();
+  setupLazyLoading();
+  setupScrollReveal();
+  setupCarousel();
+  setupVideoCards();
+}
+
+function renderVideoCard(video, wide) {
+  const thumbUrl = driveThumb(video.id, 1200);
+  return `<div class="video-card scroll-fade-up ${wide ? 'wide' : ''}" data-video-id="${video.id}">
+    <img src="${thumbUrl}" alt="${video.caption || ''}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
+    <div class="play-overlay">
+      <div class="play-btn-circle">
+        <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+      </div>
+    </div>
+    <div class="video-label">Video</div>
+    <div class="overlay"></div>
+  </div>`;
+}
+
+function renderPhotoCard(photo, globalIndex, extraClass) {
+  const thumbUrl = driveThumb(photo.id, 1600);
+  const caption = photo.caption || '';
+  const location = photo.location || '';
+
+  return `<div class="photo-card loading scroll-fade-up ${extraClass}" data-index="${globalIndex}" onclick="openLightbox(${globalIndex})">
+    <img data-src="${thumbUrl}" alt="${caption}" loading="lazy">
+    <div class="overlay">
+      <div></div>
+      <button class="photo-download-btn" onclick="event.stopPropagation(); downloadPhoto('${photo.id}', 'morocco-photo')" title="Save photo" aria-label="Save photo">
+        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </button>
+    </div>
+  </div>`;
+}
+
+// ============================================================
+// NAV
+// ============================================================
+
+function renderNav() {
+  const links = [];
+  const mobileLinks = [];
+
+  if ((GALLERY_DATA.highlights.carousel && GALLERY_DATA.highlights.carousel.length > 0) || (GALLERY_DATA.highlights.videos && GALLERY_DATA.highlights.videos.length > 0)) {
+    links.push(`<li><a href="#highlights">Highlights</a></li>`);
+    mobileLinks.push(`<a href="#highlights" onclick="closeMobileMenu()">Highlights</a>`);
+  }
+
+  GALLERY_DATA.days.forEach(day => {
+    if (day.upcoming) {
+      links.push(`<li><a class="upcoming-tab" style="color:var(--light-gray);cursor:default;pointer-events:none;opacity:0.5">${day.title}</a></li>`);
+      mobileLinks.push(`<a class="upcoming-tab" style="color:var(--light-gray);pointer-events:none;opacity:0.5">${day.title}</a>`);
+    } else {
+      links.push(`<li><a href="#${day.id}">${day.title}</a></li>`);
+      mobileLinks.push(`<a href="#${day.id}" onclick="closeMobileMenu()">${day.title}</a>`);
+    }
+  });
+
+  // Google Drive link
+  links.push(`<li><a href="https://drive.google.com/drive/folders/1EdQXnTxaTJ7bpp0RA87h7_vic4xj9smc" target="_blank" rel="noopener" style="color:var(--terracotta)">All Photos ↗</a></li>`);
+  mobileLinks.push(`<a href="https://drive.google.com/drive/folders/1EdQXnTxaTJ7bpp0RA87h7_vic4xj9smc" target="_blank" rel="noopener" style="color:var(--terracotta)">All Photos ↗</a>`);
+
+  document.getElementById('navLinks').innerHTML = links.join('');
+  document.getElementById('mobileMenu').innerHTML = mobileLinks.join('');
+}
+
+// Mobile menu
+document.getElementById('navToggle').addEventListener('click', () => {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('active');
+  document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+});
+
+function closeMobileMenu() {
+  document.getElementById('mobileMenu').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ============================================================
+// LAZY LOADING
+// ============================================================
+
+function setupLazyLoading() {
+  const lazyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        const src = img.dataset.src;
+        if (src) {
+          img.src = src;
+          img.onload = () => {
+            img.closest('.photo-card')?.classList.remove('loading');
+          };
+          img.onerror = () => {
+            img.closest('.photo-card')?.classList.remove('loading');
+            img.closest('.photo-card')?.classList.add('error');
+            img.style.display = 'none';
+          };
+          img.removeAttribute('data-src');
+          lazyObserver.unobserve(img);
+        }
       }
-    } catch(e) {}
-  }
+    });
+  }, { rootMargin: '200px' });
 
-  loadState();
+  document.querySelectorAll('img[data-src]').forEach(img => lazyObserver.observe(img));
+}
+
+// ============================================================
+// SCROLL ANIMATIONS (Apple-style)
+// ============================================================
+
+function setupScrollReveal() {
+  // Section dividers — full reveal animation
+  const dividerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.section-divider').forEach(el => {
+    dividerObserver.observe(el);
+  });
+
+  // Photo/video cards and other fade-up elements
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.scroll-fade-up').forEach(el => {
+    fadeObserver.observe(el);
+  });
+
+  // Highlight section fade
+  const highlightObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.05 });
+
+  document.querySelectorAll('.highlight-section').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    highlightObserver.observe(el);
+  });
+}
+
+// ============================================================
+// CAROUSEL
+// ============================================================
+
+let carouselInterval;
+let currentSlide = 0;
+
+function setupCarousel() {
+  const carousel = document.getElementById('highlightCarousel');
+  if (!carousel) return;
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  if (slides.length <= 1) return;
+
+  carouselInterval = setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateCarousel();
+  }, 4500);
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  updateCarousel();
+  clearInterval(carouselInterval);
+  carouselInterval = setInterval(() => {
+    const carousel = document.getElementById('highlightCarousel');
+    if (!carousel) return;
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateCarousel();
+  }, 4500);
+}
+
+function updateCarousel() {
+  const carousel = document.getElementById('highlightCarousel');
+  if (!carousel) return;
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
+  dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+}
+
+// ============================================================
+// VIDEO CARDS
+// ============================================================
+
+function setupVideoCards() {
+  document.querySelectorAll('.video-card').forEach(card => {
+    card.addEventListener('click', function() {
+      if (this.classList.contains('playing')) return;
+      const videoId = this.dataset.videoId;
+      const iframe = document.createElement('iframe');
+      iframe.src = 'https://drive.google.com/file/d/' + videoId + '/preview';
+      iframe.allow = 'autoplay';
+      iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;z-index:5';
+      this.appendChild(iframe);
+      this.classList.add('playing');
+      // Hide overlay and play button
+      const overlay = this.querySelector('.play-overlay');
+      if (overlay) overlay.style.display = 'none';
+      const label = this.querySelector('.video-label');
+      if (label) label.style.display = 'none';
+    });
+  });
+}
+
+// ============================================================
+// LIGHTBOX
+// ============================================================
+
+let currentLightboxIndex = 0;
+
+function openLightbox(index) {
+  const photos = window._allPhotos;
+  if (!photos || !photos[index]) return;
+
+  currentLightboxIndex = index;
+  updateLightboxContent();
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function updateLightboxContent() {
+  const photos = window._allPhotos;
+  const photo = photos[currentLightboxIndex];
+  if (!photo) return;
+
+  const img = document.getElementById('lightbox-img');
+  img.src = driveThumb(photo.id, 2560);
+
+  document.getElementById('lightboxCounter').textContent =
+    `${currentLightboxIndex + 1} / ${photos.length}`;
+
+  const captionEl = document.getElementById('lightboxCaption');
+  captionEl.style.display = 'none';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function lightboxPrev() {
+  const photos = window._allPhotos;
+  currentLightboxIndex = (currentLightboxIndex - 1 + photos.length) % photos.length;
+  updateLightboxContent();
+}
+
+function lightboxNext() {
+  const photos = window._allPhotos;
+  currentLightboxIndex = (currentLightboxIndex + 1) % photos.length;
+  updateLightboxContent();
+}
+
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+document.getElementById('lightboxPrev').addEventListener('click', lightboxPrev);
+document.getElementById('lightboxNext').addEventListener('click', lightboxNext);
+
+document.getElementById('lightbox').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) closeLightbox();
+});
+
+// Download from lightbox
+document.getElementById('lightboxDownload').addEventListener('click', () => {
+  const photo = window._allPhotos[currentLightboxIndex];
+  if (photo) downloadPhoto(photo.id, photo.caption || 'morocco-photo');
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (!document.getElementById('lightbox').classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') lightboxPrev();
+  if (e.key === 'ArrowRight') lightboxNext();
+});
+
+// Touch/swipe support for lightbox
+let touchStartX = 0;
+let touchStartY = 0;
+
+document.getElementById('lightbox').addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+  touchStartY = e.changedTouches[0].screenY;
+}, { passive: true });
+
+document.getElementById('lightbox').addEventListener('touchend', (e) => {
+  const deltaX = e.changedTouches[0].screenX - touchStartX;
+  const deltaY = e.changedTouches[0].screenY - touchStartY;
+
+  // Only register horizontal swipes (not vertical)
+  if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
+    if (deltaX > 0) lightboxPrev();
+    else lightboxNext();
+  }
+}, { passive: true });
+
+// ============================================================
+// PHOTO DOWNLOAD (iPhone-friendly)
+// ============================================================
+// On iOS Safari, the best UX is to open the full image in a new tab
+// so users can long-press → "Add to Photos". We also try the
+// download attribute approach for desktop/Android.
+// ============================================================
+
+function downloadPhoto(fileId, filename) {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+  if (isIOS) {
+    // iOS: open full-size image in new tab for long-press save
+    window.open(driveThumb(fileId, 4096), '_blank');
+  } else {
+    // Desktop/Android: trigger download via hidden link
+    const url = driveDownload(fileId);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename.replace(/[^a-z0-9_-]/gi, '_') + '.jpg';
+    a.target = '_blank';
+    a.rel = 'noopener';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+}
+
+// ============================================================
+// INITIALIZE
+// ============================================================
+
+document.addEventListener('DOMContentLoaded', renderGallery);
+</script>
+
+<!-- Music Player: American Girl by Harry Styles (YouTube audio) -->
+<button class="music-btn" id="musicBtn" title="Play music">
+  <span class="play-icon">
+    <svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg>
+  </span>
+  <div class="eq-bars">
+    <div class="eq-bar"></div>
+    <div class="eq-bar"></div>
+    <div class="eq-bar"></div>
+    <div class="eq-bar"></div>
+  </div>
+  <div class="music-tooltip">Ma Tnsani (Yalla Habibi) — Vanco ft. AYA</div>
+</button>
+
+<!-- Hidden YouTube player -->
+<div id="ytPlayer" style="position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;overflow:hidden;pointer-events:none"></div>
+
+<script>
+// YouTube IFrame API
+let ytReady = false;
+let player = null;
+let musicPlaying = false;
+
+// Load YouTube API
+const tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+document.head.appendChild(tag);
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('ytPlayer', {
+    height: '1',
+    width: '1',
+    videoId: '4FIcTRe-jio',  // Ma Tnsani (Yalla Habibi) - Vanco ft. AYA
+    playerVars: {
+      autoplay: 0,
+      loop: 1,
+      playlist: '4FIcTRe-jio',
+      controls: 0,
+    },
+    events: {
+      onReady: () => {
+        ytReady = true;
+        // Auto-play on first user interaction (browsers require gesture)
+        const autoStart = () => {
+          if (ytReady && !musicPlaying) {
+            player.playVideo();
+            player.setVolume(35);
+            document.getElementById('musicBtn').classList.add('playing');
+            musicPlaying = true;
+          }
+          document.removeEventListener('click', autoStart);
+          document.removeEventListener('scroll', autoStart);
+          document.removeEventListener('touchstart', autoStart);
+        };
+        document.addEventListener('click', autoStart, { once: true });
+        document.addEventListener('scroll', autoStart, { once: true });
+        document.addEventListener('touchstart', autoStart, { once: true });
+      },
+      onStateChange: (e) => {
+        if (e.data === YT.PlayerState.ENDED) {
+          player.playVideo(); // loop
+        }
+      }
+    }
+  });
+}
+
+document.getElementById('musicBtn').addEventListener('click', () => {
+  const btn = document.getElementById('musicBtn');
+  if (!ytReady) return;
+
+  if (musicPlaying) {
+    player.pauseVideo();
+    btn.classList.remove('playing');
+    musicPlaying = false;
+  } else {
+    player.playVideo();
+    btn.classList.add('playing');
+    musicPlaying = true;
+  }
+});
 </script>
 
 </body>
